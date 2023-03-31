@@ -1,0 +1,13 @@
+     bug1  bug2  bug3  bug4 ...
+
+r1: {fix}
+
+r2: {}
+
+r3:
+
+r4:
+
+turn version differences into a vector by judgement of the heuristics --> apply classification techniques
+1. Cleaning of Reg4j dataset
+2. Explore other heuristics: historical and regression greybox fuzzing

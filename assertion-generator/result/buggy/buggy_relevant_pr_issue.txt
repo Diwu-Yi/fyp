@@ -1,0 +1,151 @@
+
+
+
+
+
+
+
+
+
+
+#905, Stream network loading,issue_description place holder, not applicable for this type of issue, https://github.com/jhy/jsoup/pull/905, https://github.com/jhy/jsoup/commit/654bc6f981587bd4b39b66702550bad33e1eacc9,jsoup
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#2156, 序列化时对java.sql.Date和java.util.Date应用不同的DateFormat？, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/issues/2156,https://github.com/alibaba/fastjson/commit/52652252e7095ecb11bfe8baddd2a087c04fa14e, fastjson
+#3150, AfterFilter附加对象时$ref引用出现null属性名($ref: "$.data[0].null"), issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/issues/3150,https://github.com/alibaba/fastjson/commit/010691b365090a312d096dde96059d4fd2cb90ea, fastjson
+#2156, 序列化时对java.sql.Date和java.util.Date应用不同的DateFormat？, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/issues/2156,https://github.com/alibaba/fastjson/commit/52652252e7095ecb11bfe8baddd2a087c04fa14e, fastjson
+#849, IdentityHashMap占用内存大, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/issues/849,https://github.com/alibaba/fastjson/commit/e4562183cf45c0c5f77c446350da6b89ccf49687, fastjson
+
+#3246, 修复下划线字段hash值，取值错误bug, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/pull/3246,https://github.com/alibaba/fastjson/commit/18a99f2d449321393f57d50e2fbf35ca5748fae5, fastjson
+
+
+
+
+
+#3061, 像ParserConfig.getDeserializer一样不为null及时返回，否则会影响自定义Module, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/issues/3061,https://github.com/alibaba/fastjson/commit/2f1127017be74efe89a16eb08d83dd629728faa2, fastjson
+
+
+#1363, 反序列化时对map对象的处理的问题, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/issues/1363,https://github.com/alibaba/fastjson/commit/21c2f4b2f963c044e4adafef4ddd966661526af9, fastjson
+#331, V1.2.5 使用 ISO8601 序列化Calendar类型,  丢失时间数据, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/issues/331,https://github.com/alibaba/fastjson/commit/8d74f9e5a034888610ca3199807e2eec64178210, fastjson
+#1363, 反序列化时对map对象的处理的问题, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/issues/1363,https://github.com/alibaba/fastjson/commit/21c2f4b2f963c044e4adafef4ddd966661526af9, fastjson
+
+
+
+
+
+
+
+
+
+#735, json的key值为字符串类型，但是当只含有数字和.的时候处理有问题, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/issues/735,https://github.com/alibaba/fastjson/commit/178fc2df6677c70cd1bd390ed59cf846260fa40a, fastjson
+
+
+
+
+
+
+
+
+#1884, 反序列化不带毫秒的ISO8601日期时丢失时区信息, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/issues/1884,https://github.com/alibaba/fastjson/commit/57aff945aae44d0adb86467133b3e3dc19044d5e, fastjson
+
+
+
+
+#867, 关于提高序列化SerializerFeature.WriteNullXXXX的用户体验, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/issues/867,https://github.com/alibaba/fastjson/commit/91e9164ce5217f3f1710882898cac511e1aae458, fastjson
+#1501, 修复在FastJsonHttpMessageConverter 中使用了spring4.x版本新增的TypeResolvable 导致sp…, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/pull/1501,https://github.com/alibaba/fastjson/commit/020aefbaadf8cee2916bcfd552bdf66ec6b6e830, fastjson
+
+
+#1493, 当对象中存在LocalDateTime 类型时，序列化后的json会出现不同DateFormat结果, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/issues/1493,https://github.com/alibaba/fastjson/commit/181d423fbb50dd157209d11ac872c73d0e224bd8, fastjson
+#331, V1.2.5 使用 ISO8601 序列化Calendar类型,  丢失时间数据, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/issues/331,https://github.com/alibaba/fastjson/commit/8d74f9e5a034888610ca3199807e2eec64178210, fastjson
+
+
+
+#331, V1.2.5 使用 ISO8601 序列化Calendar类型,  丢失时间数据, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/issues/331,https://github.com/alibaba/fastjson/commit/8d74f9e5a034888610ca3199807e2eec64178210, fastjson
+
+
+
+#1225, 1.1.57.android 带泛型的多层继承类的解析bug, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/issues/1225,https://github.com/alibaba/fastjson/commit/771af47385330bf0505b47527698d055d883ddf5, fastjson
+#1225, 1.1.57.android 带泛型的多层继承类的解析bug, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/issues/1225,https://github.com/alibaba/fastjson/commit/771af47385330bf0505b47527698d055d883ddf5, fastjson
+#1225, 1.1.57.android 带泛型的多层继承类的解析bug, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/issues/1225,https://github.com/alibaba/fastjson/commit/771af47385330bf0505b47527698d055d883ddf5, fastjson
+
+
+
+#489, JSONArray.<T> T getObject 以及 JSONObject.<T> T getObject 不支持@JSONCreator注解, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/issues/489,https://github.com/alibaba/fastjson/commit/56272ce478a1542972598a0d6ad699436139dfbb, fastjson
+
+
+#849, IdentityHashMap占用内存大, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/issues/849,https://github.com/alibaba/fastjson/commit/e4562183cf45c0c5f77c446350da6b89ccf49687, fastjson
+#849, IdentityHashMap占用内存大, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/issues/849,https://github.com/alibaba/fastjson/commit/e4562183cf45c0c5f77c446350da6b89ccf49687, fastjson
+
+
+#522, 特殊构造的$ref导致JSON解析失败, issue_description place holder, not applicable for this type of issue, https://github.com/alibaba/fastjson/issues/522,https://github.com/alibaba/fastjson/commit/dba0e92448284de00159f8933842d2f10bc13259, fastjson
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

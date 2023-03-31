@@ -1,0 +1,753 @@
+#1710,62c0595813b817ec593b0941ca4c3f29d10fac55, Jonathan Hedley,Preserve the mark when buffering  So that we can rewind if required.  Fixes #1324, https://github.com/jhy/jsoup/commit/62c0595813b817ec593b0941ca4c3f29d10fac55,jsoup
+#1710,b92b4f6b9b3256e97bfb6a0732bf113b6da53a4c, Jonathan Hedley,isEmpty() should bufferUp  isEmpty wasn't checking to see if more content was able to be read, so when called directly without a consume() could give misleading results.  Fixes #995, https://github.com/jhy/jsoup/commit/b92b4f6b9b3256e97bfb6a0732bf113b6da53a4c,jsoup
+#1710,a8d431bad9575d5f32d7b87252962a8aae02d59f, krystiangorecki,Fixes #1220 self-closing textarea, https://github.com/jhy/jsoup/commit/a8d431bad9575d5f32d7b87252962a8aae02d59f,jsoup
+#1710,fcab98cdd311deb3dd4fd63fef2bc6c4c397f186, Jonathan Hedley,Added val() and val(string) to Element and Elements.  Treat contents of textarea as text, not data.  Closes #14, https://github.com/jhy/jsoup/commit/fcab98cdd311deb3dd4fd63fef2bc6c4c397f186,jsoup
+#1710,f5fc1bb04c224865f8eee5ed718f4ffee0e18712, Jonathan Hedley,Don't throw an exception if a selector ends in a space, just trim it.  Fixes #1274, https://github.com/jhy/jsoup/commit/f5fc1bb04c224865f8eee5ed718f4ffee0e18712,jsoup
+#1710,a97672ad240f679f0071e046a119edb6d7dcbb1c, Jonathan Hedley,Added Element.selectFirst(), https://github.com/jhy/jsoup/commit/a97672ad240f679f0071e046a119edb6d7dcbb1c,jsoup
+#1710,91ca25b341bc5ad1c364b8e7389287c45ca9df2c, Jonathan Hedley,Don't normalize away zwj or zwnj  Fixes #1269, combined emojis broken, https://github.com/jhy/jsoup/commit/91ca25b341bc5ad1c364b8e7389287c45ca9df2c,jsoup
+#1710,c3f8caa7c16c08b803b0f34bfffdf9777c7e382c, Jonathan Hedley,Normalize invisibles in text()  Fixes #978, https://github.com/jhy/jsoup/commit/c3f8caa7c16c08b803b0f34bfffdf9777c7e382c,jsoup
+#1710,7c60ac132afc0034da18bfe969e18046994f9427, Jonathan Hedley,Merge branch 'pr/1113', https://github.com/jhy/jsoup/commit/7c60ac132afc0034da18bfe969e18046994f9427,jsoup
+#1710,2cce405d1eed3536b222f830220ef32f5a2937d7, Jonathan Hedley,Parse unknown tags as inline elements that can contain blocks.  Ensures <p><custom>Test</custom></p> parses like that, and not <p></p><custom>Test</custom>.  Closes #1, https://github.com/jhy/jsoup/commit/2cce405d1eed3536b222f830220ef32f5a2937d7,jsoup
+#1710,8b837a43cbe2c12624ab2088dc4ff9a725af5f4d, Jonathan Hedley,Return null attribute values as empty string  Previous / defined behaviour.  Fixes #1065, https://github.com/jhy/jsoup/commit/8b837a43cbe2c12624ab2088dc4ff9a725af5f4d,jsoup
+#1710,ea1fb65e9ff8eee82c4e379dc3236d09a5ab02e1, Jonathan Hedley,Refactored Attributes to be an array pair vs LinkedHashSet  Also a couple perf (cpu / garbage) tweaks, https://github.com/jhy/jsoup/commit/ea1fb65e9ff8eee82c4e379dc3236d09a5ab02e1,jsoup
+#1710,bdf1df7eb3ca76cdcdaca38f7df5d941bbb1c664, Jonathan Hedley,Treat < in a start tag as a new tag, not an attribute name  Fixes #797, https://github.com/jhy/jsoup/commit/bdf1df7eb3ca76cdcdaca38f7df5d941bbb1c664,jsoup
+#1710,8749726a79c22451b1f01b14fb2137f734e926b4, Jonathan Hedley,Reimplementation of parser and tokeniser, to make jsoup a HTML5 conformat parser, against the http://whatwg.org/html spec., https://github.com/jhy/jsoup/commit/8749726a79c22451b1f01b14fb2137f734e926b4,jsoup
+#1710,e9feec90dbd3e428dc1930c3b5efbd9271160d01, Jonathan Hedley,Check that XML declarations parse OK  Fixes #1015, https://github.com/jhy/jsoup/commit/e9feec90dbd3e428dc1930c3b5efbd9271160d01,jsoup
+#1710,4eb4f2b2e88a2f9e6c5c1e8d0477060954f24218, Jonathan Hedley,Detect charset from xml prolog  Fixes #701, https://github.com/jhy/jsoup/commit/4eb4f2b2e88a2f9e6c5c1e8d0477060954f24218,jsoup
+#1710,1028b37a1dfbc5dda7b18cbe692ab168c54fb505, Jonathan Hedley,Leaf nodes should return an empty list on .childNodes(), not except  Fixes #1032, https://github.com/jhy/jsoup/commit/1028b37a1dfbc5dda7b18cbe692ab168c54fb505,jsoup
+#1710,f71712ba5d28df09c9a5b6e3c8a37f05f5e3372d, Jonathan Hedley,Project :: Slimfast  Refactored node hierarchy so that leaf nodes (text, comments, scripts, etc) use 24 bytes vs 40 bytes each., https://github.com/jhy/jsoup/commit/f71712ba5d28df09c9a5b6e3c8a37f05f5e3372d,jsoup
+#1710,8808e3fbc5a8f25970c151d076636ad05798ff9d, Jonathan Hedley,NPE fix, https://github.com/jhy/jsoup/commit/8808e3fbc5a8f25970c151d076636ad05798ff9d,jsoup
+#1710,ea1fb65e9ff8eee82c4e379dc3236d09a5ab02e1, Jonathan Hedley,Refactored Attributes to be an array pair vs LinkedHashSet  Also a couple perf (cpu / garbage) tweaks, https://github.com/jhy/jsoup/commit/ea1fb65e9ff8eee82c4e379dc3236d09a5ab02e1,jsoup
+#1710,b8411990753314ed3b746d3402dec5a65ff6d603, Jonathan Hedley,Don't OBE at  EOF  Fixes #972, https://github.com/jhy/jsoup/commit/b8411990753314ed3b746d3402dec5a65ff6d603,jsoup
+#1710,654bc6f981587bd4b39b66702550bad33e1eacc9, Jonathan Hedley,Stream network loading (#905)  Implements a stream based input reader. This changes URL & file inputs from buffering the whole content into a string before starting to parse, into a stream based read.Memory consumption when loading large pages from the network or a file is substantially reduced., https://github.com/jhy/jsoup/commit/654bc6f981587bd4b39b66702550bad33e1eacc9,jsoup
+#1710,aeaf3c1a03fe4d5bfda4d63824a1f97dcec42e74, Jonathan Hedley,Search further up the stack for <pre>  Fixes #722, https://github.com/jhy/jsoup/commit/aeaf3c1a03fe4d5bfda4d63824a1f97dcec42e74,jsoup
+#1710,472c7e55ee9d5cc7e7771696092c6eeca5a91b4d, Jonathan Hedley,Fixed GAE support: load HTML entities from a file on startup, instead of embedding in the class., https://github.com/jhy/jsoup/commit/472c7e55ee9d5cc7e7771696092c6eeca5a91b4d,jsoup
+#1710,adb7a15a1e2dd6742a25592602a6e8ee77b518b6, Jonathan Hedley,Start stack search at right spot  Fixes a bug in the in-scope search, which was starting in the middle instead of the bottom when trying to limit the stack depth search. That meant that when generating implied end-tags, the stack wasn't getting shorter, so it tried to generate end tags for days, and ultimately threw a StackOverflowDetect.  (Which is somewhat ironic, because the max depth was set to prevent a different STE... Le Sigh.)  Fixes #966, https://github.com/jhy/jsoup/commit/adb7a15a1e2dd6742a25592602a6e8ee77b518b6,jsoup
+#1710,fb8b60b4d3d202c6fa708f60b8b4a5a53836af24, Jonathan Hedley,Limit stack search depth to 100  Fixes #955, https://github.com/jhy/jsoup/commit/fb8b60b4d3d202c6fa708f60b8b4a5a53836af24,jsoup
+#1710,c324fabe86c0a59eb635610dc85d8d7a7be25c74, Jonathan Hedley,Notifications to cloned elements were incorrectly delivered to the original element.  Fixes #951, https://github.com/jhy/jsoup/commit/c324fabe86c0a59eb635610dc85d8d7a7be25c74,jsoup
+#1710,38049ce2808cafce3884c25c4613aaaff9f2d0d8, Jonathan Hedley,Memoize the child element list, so that sibling index queries are much faster  Measurement was 24 ops/s prior, now 450 ops/s. (When matching ~ 12K elements in a loop), https://github.com/jhy/jsoup/commit/38049ce2808cafce3884c25c4613aaaff9f2d0d8,jsoup
+#1710,397a0caeb374c55b8dcb58e09d0faebb6e017252, MazzeX28,[fix] parsing of mixed-case tags after b934c5d (#942), https://github.com/jhy/jsoup/commit/397a0caeb374c55b8dcb58e09d0faebb6e017252,jsoup
+#1710,b934c5d3e30917de86796c89fcb7cd000f642a80, Jonathan Hedley,Make sure unkown tags close correctly when in insensitive case mode  Fixes #819, https://github.com/jhy/jsoup/commit/b934c5d3e30917de86796c89fcb7cd000f642a80,jsoup
+#1710,416ad294fb97f594c05dda7da53733cea59ab0ce, cketti,Case-insensitive attribute setter (#903)  * Add failing test for updating attribute using differently-cased key * Do case-insensitive key comparison when replacing attributes, https://github.com/jhy/jsoup/commit/416ad294fb97f594c05dda7da53733cea59ab0ce,jsoup
+#1710,e38b916ba1ebd3f5c00a6b6b8e77a4cdfea2800f, Jonathan Hedley,Merge branch 'parsesettings', https://github.com/jhy/jsoup/commit/e38b916ba1ebd3f5c00a6b6b8e77a4cdfea2800f,jsoup
+#1710,1203bd459fe137e78a2a6dc2969f3c4995b726ce, Jonathan Hedley,Make sure the HTML parser is correctly reset before reuse  Otherwise the stack and current form element were stuffed if the DataUtil needed to reparse after switching content encoding.  Also, was needlessly redecoding when the character set was "utf-8" because the check was case sensitive., https://github.com/jhy/jsoup/commit/1203bd459fe137e78a2a6dc2969f3c4995b726ce,jsoup
+#1710,433d2f180058b8b73e1951c6cfbb986714e68b0f, Jonathan Hedley,Allow an alternate parser to be supplied for core use cases., https://github.com/jhy/jsoup/commit/433d2f180058b8b73e1951c6cfbb986714e68b0f,jsoup
+#1710,83f01fd864e59fa69c894da06f4a15489222d401, Jonathan Hedley,Access the class attribute case-insensitiviely  Fixes #814, https://github.com/jhy/jsoup/commit/83f01fd864e59fa69c894da06f4a15489222d401,jsoup
+#1710,e38b916ba1ebd3f5c00a6b6b8e77a4cdfea2800f, Jonathan Hedley,Merge branch 'parsesettings', https://github.com/jhy/jsoup/commit/e38b916ba1ebd3f5c00a6b6b8e77a4cdfea2800f,jsoup
+#1710,a623db776696c0e03f68e849147f6a0c57063c02, Jonathan Hedley,Check attribute name is not empty after trimming before creating attribute  Fixes #793, https://github.com/jhy/jsoup/commit/a623db776696c0e03f68e849147f6a0c57063c02,jsoup
+#1710,472c7e55ee9d5cc7e7771696092c6eeca5a91b4d, Jonathan Hedley,Fixed GAE support: load HTML entities from a file on startup, instead of embedding in the class., https://github.com/jhy/jsoup/commit/472c7e55ee9d5cc7e7771696092c6eeca5a91b4d,jsoup
+#1710,2c58e975ab00eb369ee3dfbba07a4a78a1ef9e19, Jonathan Hedley,Remove attributes using iterator to avoid CMEs.  Fixes #759, https://github.com/jhy/jsoup/commit/2c58e975ab00eb369ee3dfbba07a4a78a1ef9e19,jsoup
+#1710,e38b916ba1ebd3f5c00a6b6b8e77a4cdfea2800f, Jonathan Hedley,Merge branch 'parsesettings', https://github.com/jhy/jsoup/commit/e38b916ba1ebd3f5c00a6b6b8e77a4cdfea2800f,jsoup
+#1710,25e0e1e9ffca9a350d060db7d2179c5c9e459055, Jonathan Hedley,Added support for unicode letters in tags  Fixes #667, https://github.com/jhy/jsoup/commit/25e0e1e9ffca9a350d060db7d2179c5c9e459055,jsoup
+#1710,8749726a79c22451b1f01b14fb2137f734e926b4, Jonathan Hedley,Reimplementation of parser and tokeniser, to make jsoup a HTML5 conformat parser, against the http://whatwg.org/html spec., https://github.com/jhy/jsoup/commit/8749726a79c22451b1f01b14fb2137f734e926b4,jsoup
+#1710,941f69bfe96753ef30dbb3bb1bdffb72ee8944e0, Jonathan Hedley,Added not-null validators to Element.appendText() and Element.prependText(), https://github.com/jhy/jsoup/commit/941f69bfe96753ef30dbb3bb1bdffb72ee8944e0,jsoup
+#1710,f548940dd8be5f8c93ef17a8896b2807aa2a08bc, Jonathan Hedley,Optimised textnodes to not hold attributes or childnodes unless required on use., https://github.com/jhy/jsoup/commit/f548940dd8be5f8c93ef17a8896b2807aa2a08bc,jsoup
+#1710,73b52d0d995b8c6091c0e92f8ada03a2753b576a, Jonathan Hedley,Dedupe elements by identity, not equality  Fixed #614, https://github.com/jhy/jsoup/commit/73b52d0d995b8c6091c0e92f8ada03a2753b576a,jsoup
+#1710,8391b7231a2519557d41209d728acc4f422af381, Jonathan Hedley,Improved hashcode and equals for Node  Fixes #537, https://github.com/jhy/jsoup/commit/8391b7231a2519557d41209d728acc4f422af381,jsoup
+#1710,3b4f9dfa91b6f1852c35baf79c4a13eacc6112c3, Jonathan Hedley,Fix table insertion into TH tags  Fixes #575, https://github.com/jhy/jsoup/commit/3b4f9dfa91b6f1852c35baf79c4a13eacc6112c3,jsoup
+#1710,8749726a79c22451b1f01b14fb2137f734e926b4, Jonathan Hedley,Reimplementation of parser and tokeniser, to make jsoup a HTML5 conformat parser, against the http://whatwg.org/html spec., https://github.com/jhy/jsoup/commit/8749726a79c22451b1f01b14fb2137f734e926b4,jsoup
+#1710,11f7c1bd7a2d12f0b1150aa246c61afefd11991f, Jonathan Hedley,Search for element siblings by identity not content  Fixes #554, #561, https://github.com/jhy/jsoup/commit/11f7c1bd7a2d12f0b1150aa246c61afefd11991f,jsoup
+#1710,8391b7231a2519557d41209d728acc4f422af381, Jonathan Hedley,Improved hashcode and equals for Node  Fixes #537, https://github.com/jhy/jsoup/commit/8391b7231a2519557d41209d728acc4f422af381,jsoup
+#1710,74c61a13acb6fc11456cd442d4d982a0e943e9d0, Jonathan Hedley,Merge pull request #388 from amferraz/master  Fix issue with invalid document when script tag is whitelisted, https://github.com/jhy/jsoup/commit/74c61a13acb6fc11456cd442d4d982a0e943e9d0,jsoup
+#1710,dfac9ce465ff9c988904d05014d2be2715aa1d2b, Jonathan Hedley,Refactored the Cleaner to traverse rather than recurse child nodes  Avoids the risk of overflowing the stack  Fixes #246, https://github.com/jhy/jsoup/commit/dfac9ce465ff9c988904d05014d2be2715aa1d2b,jsoup
+#1710,b033535fe2cf887de8076221a0d614abfcf17d7b, Jonathan Hedley,Relaxed doctype validation  Fixes #460, https://github.com/jhy/jsoup/commit/b033535fe2cf887de8076221a0d614abfcf17d7b,jsoup
+#1710,f36b950de16f6db134bd98969cd8fbe578d37480, Jonathan Hedley,Fixed an issue with a missing quote when serialising DocumentType nodes.  Fixes #109, https://github.com/jhy/jsoup/commit/f36b950de16f6db134bd98969cd8fbe578d37480,jsoup
+#1710,32ab9579f9df6f4c9dbab5e6e035dd5f8d644e2a, amferraz,Fix issue with invalid document when script tag is whitelisted, https://github.com/jhy/jsoup/commit/32ab9579f9df6f4c9dbab5e6e035dd5f8d644e2a,jsoup
+#1710,dfac9ce465ff9c988904d05014d2be2715aa1d2b, Jonathan Hedley,Refactored the Cleaner to traverse rather than recurse child nodes  Avoids the risk of overflowing the stack  Fixes #246, https://github.com/jhy/jsoup/commit/dfac9ce465ff9c988904d05014d2be2715aa1d2b,jsoup
+#1710,c3c952e55f10b07dd9d4a9121db1b3828b0a1bc7, Jonathan Hedley,When parsing, allow all tags to self-close.  Tags that aren't expected to self-close will get an end tag.  Fixes #2458, https://github.com/jhy/jsoup/commit/c3c952e55f10b07dd9d4a9121db1b3828b0a1bc7,jsoup
+#1710,8749726a79c22451b1f01b14fb2137f734e926b4, Jonathan Hedley,Reimplementation of parser and tokeniser, to make jsoup a HTML5 conformat parser, against the http://whatwg.org/html spec., https://github.com/jhy/jsoup/commit/8749726a79c22451b1f01b14fb2137f734e926b4,jsoup
+#1710,a31ec08e102fd3832f3ff4449e9163440f0afb2c, Jonathan Hedley,Refactored entity decoding.  Modified the heuristic entity decoder to be less greedy; does not repeatedly chomp down the string until a match is found, and requires a semicolon terminator for extended entities.  Updated Entities to use the entity decoder in Tokeniser, vs the legacy decoder.  Fixes #224., https://github.com/jhy/jsoup/commit/a31ec08e102fd3832f3ff4449e9163440f0afb2c,jsoup
+#1710,8749726a79c22451b1f01b14fb2137f734e926b4, Jonathan Hedley,Reimplementation of parser and tokeniser, to make jsoup a HTML5 conformat parser, against the http://whatwg.org/html spec., https://github.com/jhy/jsoup/commit/8749726a79c22451b1f01b14fb2137f734e926b4,jsoup
+#1710,d7b5d5b28a6dd7ff198f02e1ee82160220135a74, Jonathan Hedley,Check for null body, possible in framesets.  Fixes #154, https://github.com/jhy/jsoup/commit/d7b5d5b28a6dd7ff198f02e1ee82160220135a74,jsoup
+#1710,8749726a79c22451b1f01b14fb2137f734e926b4, Jonathan Hedley,Reimplementation of parser and tokeniser, to make jsoup a HTML5 conformat parser, against the http://whatwg.org/html spec., https://github.com/jhy/jsoup/commit/8749726a79c22451b1f01b14fb2137f734e926b4,jsoup
+#1710,3e284b6ce28acdf41d7a7cc8ead881d6ab54a8f9, Jonathan Hedley,No longer strip \r before parsing.  This saves memory and CPU time at start of parse., https://github.com/jhy/jsoup/commit/3e284b6ce28acdf41d7a7cc8ead881d6ab54a8f9,jsoup
+#1710,8749726a79c22451b1f01b14fb2137f734e926b4, Jonathan Hedley,Reimplementation of parser and tokeniser, to make jsoup a HTML5 conformat parser, against the http://whatwg.org/html spec., https://github.com/jhy/jsoup/commit/8749726a79c22451b1f01b14fb2137f734e926b4,jsoup
+#1710,04b8921d4dcab019b02588620d953c4f19d43a58, Jonathan Hedley,Fixed issue where contents of a script tag within a comment could be incorrectly parsed.  Fixes #115, https://github.com/jhy/jsoup/commit/04b8921d4dcab019b02588620d953c4f19d43a58,jsoup
+#1710,13c2af3f24fceda5b44776a5257112ac7218d038, Jonathan Hedley,Output format tweak, https://github.com/jhy/jsoup/commit/13c2af3f24fceda5b44776a5257112ac7218d038,jsoup
+#1710,1d37cef1d8367af963fee4dc99164708f5d3c6f8, Jonathan Hedley,Fixed HTML entity parser to correctly parse entities like frac14 (letter + number combo).  Fixes #145, https://github.com/jhy/jsoup/commit/1d37cef1d8367af963fee4dc99164708f5d3c6f8,jsoup
+#1710,8749726a79c22451b1f01b14fb2137f734e926b4, Jonathan Hedley,Reimplementation of parser and tokeniser, to make jsoup a HTML5 conformat parser, against the http://whatwg.org/html spec., https://github.com/jhy/jsoup/commit/8749726a79c22451b1f01b14fb2137f734e926b4,jsoup
+#1710,ae80e51cf54971b6322b9b571734ffa5507c4947, Jonathan Hedley,Tweaked HTML output of closing script and style tags to not add an extraneous newline when pretty-printing., https://github.com/jhy/jsoup/commit/ae80e51cf54971b6322b9b571734ffa5507c4947,jsoup
+#1710,13c2af3f24fceda5b44776a5257112ac7218d038, Jonathan Hedley,Output format tweak, https://github.com/jhy/jsoup/commit/13c2af3f24fceda5b44776a5257112ac7218d038,jsoup
+#1710,7fe868089855c33d6345e740bfdbe6f140794598, Jonathan Hedley,Fixed an issue when parsing <script> tags.  When in body where the tokeniser wouldn't switch to the InScript state, which meant that data in a <script> wouldn't parse correctly.  Fixes #104, https://github.com/jhy/jsoup/commit/7fe868089855c33d6345e740bfdbe6f140794598,jsoup
+#1710,8749726a79c22451b1f01b14fb2137f734e926b4, Jonathan Hedley,Reimplementation of parser and tokeniser, to make jsoup a HTML5 conformat parser, against the http://whatwg.org/html spec., https://github.com/jhy/jsoup/commit/8749726a79c22451b1f01b14fb2137f734e926b4,jsoup
+#1710,51cb86699beae26b74c594e2daaa098116f9f572, Jonathan Hedley,Fixed issue in TokeniserState where the tokeniser could get trapped at EOF if in RCDataEndTag state., https://github.com/jhy/jsoup/commit/51cb86699beae26b74c594e2daaa098116f9f572,jsoup
+#1710,8749726a79c22451b1f01b14fb2137f734e926b4, Jonathan Hedley,Reimplementation of parser and tokeniser, to make jsoup a HTML5 conformat parser, against the http://whatwg.org/html spec., https://github.com/jhy/jsoup/commit/8749726a79c22451b1f01b14fb2137f734e926b4,jsoup
+#1710,694efa8bac3d66717efe7e202e47347355e07c0b, Jonathan Hedley,Tweaked Element.outerHtml() method to not generate initial newline on first output element., https://github.com/jhy/jsoup/commit/694efa8bac3d66717efe7e202e47347355e07c0b,jsoup
+#1710,13c2af3f24fceda5b44776a5257112ac7218d038, Jonathan Hedley,Output format tweak, https://github.com/jhy/jsoup/commit/13c2af3f24fceda5b44776a5257112ac7218d038,jsoup
+#1710,e42cce476c0749899dcf7d50ba36aa1dbdaf7fbf, Jonathan Hedley,Allow <a> and <font> elements to be treated as flow/block elements, to match browser parse trees., https://github.com/jhy/jsoup/commit/e42cce476c0749899dcf7d50ba36aa1dbdaf7fbf,jsoup
+#1710,45e787d054b2851e0f3607bab47e2c41496efe76, Jonathan Hedley,Support for inline font tag, https://github.com/jhy/jsoup/commit/45e787d054b2851e0f3607bab47e2c41496efe76,jsoup
+#1710,08e2a7fc2f487328f1b514e07cc9f4c9ff3d3814, Jonathan Hedley,Reverted changes that only allow empty tags in pre-defined instances.  Markup like <tag /> needs to be parsed as an empty element., https://github.com/jhy/jsoup/commit/08e2a7fc2f487328f1b514e07cc9f4c9ff3d3814,jsoup
+#1710,dbbe693c9fbeef94d663c963b57ea379c75806a1, Anton Kazennikov,fix non-void element parsing such as <a href=/link/>link text</a>, https://github.com/jhy/jsoup/commit/dbbe693c9fbeef94d663c963b57ea379c75806a1,jsoup
+#1710,b87be0c0384503d832a34d363800441b94b8fed9, Jonathan Hedley,Relaxed parse rule of SPAN to treat as block, to allow nested block content., https://github.com/jhy/jsoup/commit/b87be0c0384503d832a34d363800441b94b8fed9,jsoup
+#1710,0b56f3e5e012e689af8dda0e96d6e0c9f31853b6, Jonathan Hedley,Test fix, https://github.com/jhy/jsoup/commit/0b56f3e5e012e689af8dda0e96d6e0c9f31853b6,jsoup
+#1710,dfe666c45ece6ee90c0a7586f38ddfc6825cd65c, Jonathan Hedley,Fixed html() method of Attribute, https://github.com/jhy/jsoup/commit/dfe666c45ece6ee90c0a7586f38ddfc6825cd65c,jsoup
+#1710,57bce6dc8424637621f6b660855f23e72a08c4b3, Jonathan Hedley,Added ability to configure the document's output charset., https://github.com/jhy/jsoup/commit/57bce6dc8424637621f6b660855f23e72a08c4b3,jsoup
+#1710,c6936dd3daab6dc7098065dff0bf39d8318349eb, Jonathan Hedley,Fixed Attributes.hmtl(), https://github.com/jhy/jsoup/commit/c6936dd3daab6dc7098065dff0bf39d8318349eb,jsoup
+#1710,57bce6dc8424637621f6b660855f23e72a08c4b3, Jonathan Hedley,Added ability to configure the document's output charset., https://github.com/jhy/jsoup/commit/57bce6dc8424637621f6b660855f23e72a08c4b3,jsoup
+#1710,ba5d66010db39205e29289ae81122fc85299d145, Jonathan Hedley,Improved tag definitions to allow limited children and excluded children. Improved implicit table element creation, particularly around tbody tags., https://github.com/jhy/jsoup/commit/ba5d66010db39205e29289ae81122fc85299d145,jsoup
+#1710,0081d162cca8ad23b500b53799195fec644f261b, Jonathan Hedley,Improved implicit close tag heuristic detection when parsing malformed HTML.  Fixes an issue where appending / prepending rows to a table (or  to similar implicit element structures) would create a redundant wrapping elements.  Fixes #21, https://github.com/jhy/jsoup/commit/0081d162cca8ad23b500b53799195fec644f261b,jsoup
+#1710,7f653fab63ce7ae048a6fba1c2f529dc586369ed, Jonathan Hedley,Handle empty (self closing) blocks.  <div/><div></div> was parsing as <div><div></div></div>. No longer., https://github.com/jhy/jsoup/commit/7f653fab63ce7ae048a6fba1c2f529dc586369ed,jsoup
+#1710,e97f564d2450702d2b74ff35ecc5ad5c1e57fc0d, Jonathan Hedley,Implicit parent creation for elements, more general document structure creation., https://github.com/jhy/jsoup/commit/e97f564d2450702d2b74ff35ecc5ad5c1e57fc0d,jsoup
+#1710,e5210d1f9ef4f1d41ff0a8c4a2ab8e9192d5e087, Jonathan Hedley,Corrected fix for #998, https://github.com/jhy/jsoup/commit/e5210d1f9ef4f1d41ff0a8c4a2ab8e9192d5e087,jsoup
+#1710,df272b77c2cf89e9cbe2512bbddf8a3bc28a704b, Jonathan Hedley,In XML parse mode set to lowercase, normalize closing tags  Fixes #998, https://github.com/jhy/jsoup/commit/df272b77c2cf89e9cbe2512bbddf8a3bc28a704b,jsoup
+#3976, 高铁, fix #3631, https://github.com/alibaba/fastjson/commit/ba07c7fbda7ffb4f5fad24f5d02c03794db8c7c9,fastjson
+#3976, 高铁, bug fixed, https://github.com/alibaba/fastjson/commit/a9117d9436c8f23e0928798b7ae72b69d5282155,fastjson
+#3976, 温绍锦, Merge pull request #3474 from fanzhongwei/master  fix issue https://github.com/alibaba/fastjson/issues/3473, https://github.com/alibaba/fastjson/commit/1ccd0f19e72487545ba01078928b99aebc92505d,fastjson
+#3976, shaojin.wensj, java.sql.Date use 'yyy-MM-dd' format, for issue #2156, https://github.com/alibaba/fastjson/commit/52652252e7095ecb11bfe8baddd2a087c04fa14e,fastjson
+#3976, 温绍锦, Merge pull request #3475 from akiyamaneko/AfterFilter-NullPointerException  fix AfterFilter NullPointer exception in #3443, https://github.com/alibaba/fastjson/commit/4a9ca8518545eaf6d2f3d3e437b2d2af0af57bff,fastjson
+#3976, 高铁, bug fixed for writeAfter, fix #3150 #3342, https://github.com/alibaba/fastjson/commit/010691b365090a312d096dde96059d4fd2cb90ea,fastjson
+#3976, fanzhongwei, fix issue https://github.com/alibaba/fastjson/issues/3473, https://github.com/alibaba/fastjson/commit/5ca2b3bd42add17fe2c4ff56d88ea5cfd457ae30,fastjson
+#3976, shaojin.wensj, java.sql.Date use 'yyy-MM-dd' format, for issue #2156, https://github.com/alibaba/fastjson/commit/52652252e7095ecb11bfe8baddd2a087c04fa14e,fastjson
+#3976, blindarcheology, Merge pull request #1 from alibaba/master  update form fork, https://github.com/alibaba/fastjson/commit/7a63aa6ff33e0ad34023d70a56c621cd8886394e,fastjson
+#3976, wenshao, bug fixed for issue #849 . improved TypeRerence Performance., https://github.com/alibaba/fastjson/commit/e4562183cf45c0c5f77c446350da6b89ccf49687,fastjson
+#3976, 温绍锦, Merge pull request #3304 from ZivYan/Issue#3227  Fix Issues 3277：Method Overriding generics #3277, https://github.com/alibaba/fastjson/commit/97b01a76efa7940c28f2f182c51e4b856fa36d75,fastjson
+#3976, Mingjun Liu, fix misspell instance word, https://github.com/alibaba/fastjson/commit/8bdcdab078afe5edc116eea70ec4a8219bc450e6,fastjson
+#3976, 温绍锦, Merge pull request #3316 from ZivYan/Issue#3312  bug fixed for smartMatchField, #3312, https://github.com/alibaba/fastjson/commit/e4c86bb66a3a2b521178848adf0c50a5d842f777,fastjson
+#3976, 高铁, bug fixed for smartMatchField, #3246, https://github.com/alibaba/fastjson/commit/18a99f2d449321393f57d50e2fbf35ca5748fae5,fastjson
+#3976, nanqi, bug fixed for smartMatchField, #3312, https://github.com/alibaba/fastjson/commit/341fc39f1b341ff1574e83c6cf51536cce758fcf,fastjson
+#3976, 高铁, improved jsonpath support, https://github.com/alibaba/fastjson/commit/d0ddf9cbbe6837ad27c289a6bad243c36b7f145e,fastjson
+#3976, 高铁, support empty immutable collection & map deserialize., https://github.com/alibaba/fastjson/commit/c758b1f79bf2078f50e0c922058a2ba92cd14314,fastjson
+#3976, wenshao, support getOnly Collection Property, https://github.com/alibaba/fastjson/commit/1d4d2472ba350aa5bc6107d6650cb42897f258b1,fastjson
+#3976, 高铁, bug fixed for ref, https://github.com/alibaba/fastjson/commit/d672cc22ae2857406da3f2acf2fe6a0d2346224f,fastjson
+#3976, wenshao, bug fixed for jsonpath., https://github.com/alibaba/fastjson/commit/d77d469a821373f6b4ac8bc52306e35fd41b0a34,fastjson
+#3976, 高铁, bug fixed for toJavaObject, https://github.com/alibaba/fastjson/commit/c8c0005a1c00a3ac7622c87f9733147611494361,fastjson
+#3976, shaojin.wensj, improved JSONObject.toJavaObject performance, https://github.com/alibaba/fastjson/commit/7b416faa1015ce04505e88d1f9b0575bcf13657f,fastjson
+#3976, 高铁, bug fixed for scanFieldString & scanFieldSymbol, https://github.com/alibaba/fastjson/commit/70eaae0eb5307be0d9701037c1d2e8067cc5aeba,fastjson
+#3976, 高铁, improved json scanner, https://github.com/alibaba/fastjson/commit/67d54ae4f14418e3f9b7df7339b62e093bb0fdfa,fastjson
+#3976, chenjiechuan 00492660, Merge branch 'master' of https://github.com/alibaba/fastjson into fix-issue3061, https://github.com/alibaba/fastjson/commit/0e257a3f8c96588d04e128668a61bf9ff6d0f720,fastjson
+#3976, chenjiechuan 00492660, fixes #3061, https://github.com/alibaba/fastjson/commit/2f1127017be74efe89a16eb08d83dd629728faa2,fastjson
+#3976, chenjiechuan 00492660, Merge branch 'master' of https://github.com/alibaba/fastjson into fix-issue3079, https://github.com/alibaba/fastjson/commit/485bf7d5119dc8b9599f1adcc542aa84d98c54c7,fastjson
+#3976, 高铁, improved timestamp support, https://github.com/alibaba/fastjson/commit/6e53cca3c60182d91db31c1a8a89e58c3fc4195d,fastjson
+#3976, 高铁, bug fixed for Timestamp serialize, https://github.com/alibaba/fastjson/commit/4f02ba33c30d9fa3c1d2b5623afa891f5bd2493f,fastjson
+#3976, 高铁, improved timestamp support, https://github.com/alibaba/fastjson/commit/6e53cca3c60182d91db31c1a8a89e58c3fc4195d,fastjson
+#3976, 高铁, improved jsonpath support, https://github.com/alibaba/fastjson/commit/7154e20e0fa11675b700d9812d3f4da1b599325f,fastjson
+#3976, wenshao, improved reference support. for issue #1363, https://github.com/alibaba/fastjson/commit/21c2f4b2f963c044e4adafef4ddd966661526af9,fastjson
+#3976, 高铁, parser auto dateFormat support 'yyyy-MM-d HH:mm:ss', #3049, https://github.com/alibaba/fastjson/commit/97d0eb057803450f7cf5f6a5b67a09427880d919,fastjson
+#3976, 高铁, bug fixed for issue 331. https://github.com/alibaba/fastjson/issues/331, https://github.com/alibaba/fastjson/commit/8d74f9e5a034888610ca3199807e2eec64178210,fastjson
+#3976, 高铁, bug fixed for handle '$ref' key, https://github.com/alibaba/fastjson/commit/89f0721acd6d121ea4dddbd3974537b2bb3ddd58,fastjson
+#3976, wenshao, improved reference support. for issue #1363, https://github.com/alibaba/fastjson/commit/21c2f4b2f963c044e4adafef4ddd966661526af9,fastjson
+#3976, 高铁, improved beanToArray support, https://github.com/alibaba/fastjson/commit/7f41acca74fa517748b13667cc8da5d4b7b6e7b3,fastjson
+#3976, wenshao, bug fixed for JSONType.orders config deserializer., https://github.com/alibaba/fastjson/commit/7ba142b66750a998694ea9a40a24daa8de7fccfa,fastjson
+#3976, 高铁, object key & array maximum level limitation, https://github.com/alibaba/fastjson/commit/fbac83f3ec563d80aeb6929c1e4bdffbd98c5117,fastjson
+#3976, wenshao, bug fixed for multi-level-TypeReference parse, https://github.com/alibaba/fastjson/commit/dc06b690e00cf5a984711e254149c3037b413a99,fastjson
+#3976, 温绍锦, Merge pull request #2748 from Omega-Ariston/fix-issue2736  Fix issue2736(JSONObject.keySet()中可能包含非String键), https://github.com/alibaba/fastjson/commit/30824c9fc7cffe0e564952160e381fbd494ee161,fastjson
+#3976, wenshao, bug fixed JSONField.serializeFeature.WriteClassName, https://github.com/alibaba/fastjson/commit/33eaec097f6cf7c23c7cf8dc08f9ca7b21f9f54c,fastjson
+#3976, 温绍锦, Merge pull request #2725 from Omega-Ariston/fix-issue2628  修复反序列化BigInteger类属性值不一致的问题, https://github.com/alibaba/fastjson/commit/bb937b92d6ca9d2bf6b532727f2e314219e4805c,fastjson
+#3976, wenshao, improved BigDecimal/BigInteger property performance., https://github.com/alibaba/fastjson/commit/1d860af51a28a4b1f5fb2d9aefaf03f4422b5141,fastjson
+#3976, Omega-Ariston, fix issue #2628, https://github.com/alibaba/fastjson/commit/78ef9d8669aebdf3dfa31cedb592cd8c099fe2d2,fastjson
+#3976, wenshao, improved BigDecimal/BigInteger property performance., https://github.com/alibaba/fastjson/commit/1d860af51a28a4b1f5fb2d9aefaf03f4422b5141,fastjson
+#3976, 高铁, bug fixed for cast to JSONObject & List<JSONObject>, https://github.com/alibaba/fastjson/commit/1cd7ae743ad5f4da9224617546df27d456eae2d8,fastjson
+#3976, shaojin.wensj, improved JSONObject.toJavaObject performance, https://github.com/alibaba/fastjson/commit/7b416faa1015ce04505e88d1f9b0575bcf13657f,fastjson
+#3976, chenjiechuan 00492660, Merge branch 'master' of https://github.com/alibaba/fastjson into fix-deserializer-typo, https://github.com/alibaba/fastjson/commit/966ff88dc9a6d7b51df39e2bf726061ba25e6485,fastjson
+#3976, shaojin.wensj, improved JSONObject.toJavaObject performance, https://github.com/alibaba/fastjson/commit/7b416faa1015ce04505e88d1f9b0575bcf13657f,fastjson
+#3976, 高铁, bug fix toJavaObject, for issue #2516, https://github.com/alibaba/fastjson/commit/77315628fbe635ec417bc45c237527577092e742,fastjson
+#3976, shaojin.wensj, improved JSONObject.toJavaObject performance, https://github.com/alibaba/fastjson/commit/7b416faa1015ce04505e88d1f9b0575bcf13657f,fastjson
+#3976, 高铁, bug fix for Field & Getter Type Not Match, https://github.com/alibaba/fastjson/commit/fab95ad30d827fd66a5714f67c2ba29c73cbe8f2,fastjson
+#3976, shaojin.wensj, improved JSONObject.toJavaObject performance, https://github.com/alibaba/fastjson/commit/7b416faa1015ce04505e88d1f9b0575bcf13657f,fastjson
+#3976, 高铁, bug fixed for json path, https://github.com/alibaba/fastjson/commit/e47675f6cd81745cb608d209420845746c162880,fastjson
+#3976, wenshao, bug fixed for jsonpath. issue #735, https://github.com/alibaba/fastjson/commit/178fc2df6677c70cd1bd390ed59cf846260fa40a,fastjson
+#3976, shaojin.wensj, bug fixed for smark field match, for issue #2348, https://github.com/alibaba/fastjson/commit/f5e9d59a441601f517a1cc9efe10d5ee72864ca8,fastjson
+#3976, 高铁, parser support filedName like 'message_id', https://github.com/alibaba/fastjson/commit/12fd92fb1c41e5b9aa6ec4455d8802911e179052,fastjson
+#3976, shaojin.wensj, write reference except Collections.emptyMap(), for issue #2240, https://github.com/alibaba/fastjson/commit/a117a37cdf8172748dde4c00d06fca06a0ef29c4,fastjson
+#3976, wenshao, 1.1.8  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1460 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/76da49cce6107ff399427ee12cbb7379744a70f2,fastjson
+#3976, 业余布道师, Optimize FastJsonRedisSerializer., https://github.com/alibaba/fastjson/commit/dec2613040360d2f712ec6b8b2e7f67dabc9f180,fastjson
+#3976, 业余布道师, Merge branch 'master' of https://github.com/alibaba/fastjson, https://github.com/alibaba/fastjson/commit/50b3af50de60e8251e6065e3e226007b5bb41f74,fastjson
+#3976, 业余布道师, Merge branch 'master' of https://github.com/alibaba/fastjson, https://github.com/alibaba/fastjson/commit/0d272644b4ff43684260486629adc3e99cd45b66,fastjson
+#3976, wenshao, improved float/double parse performance., https://github.com/alibaba/fastjson/commit/ef6c08a304ba53d376d8dcde9c4eff2476e27b40,fastjson
+#3976, shaojin.wensj, bug fixed for parseFloat, https://github.com/alibaba/fastjson/commit/17e56f9c6b1e650c1ea9190d479ad390111234f1,fastjson
+#3976, wenshao, improved float/double parse performance., https://github.com/alibaba/fastjson/commit/ef6c08a304ba53d376d8dcde9c4eff2476e27b40,fastjson
+#3976, wenshao, improved castToInt, https://github.com/alibaba/fastjson/commit/93790a2257e8b7776f8e87fee2d5072618ad0b66,fastjson
+#3976, wenshao, refactor cast to byte/short/int/long, https://github.com/alibaba/fastjson/commit/37bd050e90535b0d58940eb2c406de4faee159f7,fastjson
+#3976, wenshao, bug fixed for encodeUTF8, https://github.com/alibaba/fastjson/commit/bc66781b54314972cf07d0ca4a4a68a6d2bc169a,fastjson
+#3976, 高铁, improved toBytes & writeJSONString performance, https://github.com/alibaba/fastjson/commit/6594789438cea10cecb9799a32138d2eddb4cba4,fastjson
+#3976, wenshao, bug fixed for LabelFilter, for issue #1856, https://github.com/alibaba/fastjson/commit/15dead6fcbb32402b9a3a4802c24f1780d6e1901,fastjson
+#3976, 高铁, refactor, https://github.com/alibaba/fastjson/commit/34342bec4f11298c9a52997ad066c19e47726e1e,fastjson
+#3976, zgray, bug fixed for issue #1884, https://github.com/alibaba/fastjson/commit/57aff945aae44d0adb86467133b3e3dc19044d5e,fastjson
+#3976, zgray, fix: 解决在解析ISO8601不带毫秒的数值时，毫秒依然有值的问题。  fixed #1884, https://github.com/alibaba/fastjson/commit/ba07795057a92f6af12191d5c74fff1649725565,fastjson
+#3976, wenshao, bug fixed for float parse. for issue #1723, https://github.com/alibaba/fastjson/commit/07e7ba5982fe0ba3e8a75ba034102d8d71c1f1d0,fastjson
+#3976, wenshao, improved float/double parse performance., https://github.com/alibaba/fastjson/commit/ef6c08a304ba53d376d8dcde9c4eff2476e27b40,fastjson
+#3976, wenshao, bug fixed for scanFloat. for issue #1723, https://github.com/alibaba/fastjson/commit/f5b7a5fce0b61e7150bb27813135e1b1efb97b46,fastjson
+#3976, wenshao, improved float/double parse performance., https://github.com/alibaba/fastjson/commit/ef6c08a304ba53d376d8dcde9c4eff2476e27b40,fastjson
+#3976, wenshao, bug fixed for toJavaObject. for issue #1727, https://github.com/alibaba/fastjson/commit/57f99a33a0e2870c47bc3e43a4db06dd573b3503,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, bug fixed for issue #1603, https://github.com/alibaba/fastjson/commit/362eb79838854c1b18ea8bbd456b296dde402b30,fastjson
+#3976, wenshao, improve support readonly type, such as AtomicInteger, AtomicLong, AtomicBoolean, Map, https://github.com/alibaba/fastjson/commit/0c4f90d55d1aff4d011accd1cfefb59033551100,fastjson
+#3976, wenshao, bug fixed for WriteNullBooleanAsFalse. for issue #1570, https://github.com/alibaba/fastjson/commit/1804c85adea41809d9d171fbc271c2f53af93edf,fastjson
+#3976, wenshao, improved SerializeFeature user experience. issue #867, https://github.com/alibaba/fastjson/commit/91e9164ce5217f3f1710882898cac511e1aae458,fastjson
+#3976, wenshao, improved deserialize for Map.Entry. bug fixed for issue #1583, https://github.com/alibaba/fastjson/commit/c4343c398b1ab609251bad4c13112a428aaa62ec,fastjson
+#3976, 高铁, Merge pull request #1501 from neil4dong/master  修复在FastJsonHttpMessageConverter 中使用了spring4.x版本新增的TypeResolvable 导致sp…, https://github.com/alibaba/fastjson/commit/020aefbaadf8cee2916bcfd552bdf66ec6b6e830,fastjson
+#3976, Neil Dong, Merge pull request #5 from alibaba/master  pull upstream, https://github.com/alibaba/fastjson/commit/a97885cf1239701c7446a5bfe548f7dd3c00a5e2,fastjson
+#3976, wenshao, improved smart match performance., https://github.com/alibaba/fastjson/commit/b1222868654e6d508374110ae35e48613acc45ea,fastjson
+#3976, wenshao, bug fixed for 'is' prefix fieldName smartMatch. for issue #1529, https://github.com/alibaba/fastjson/commit/654ea41bb0187863eb2db7ab6528c081850183b8,fastjson
+#3976, wenshao, update to 1.1.60.android, https://github.com/alibaba/fastjson/commit/246767658d5b3832e479394aa4ea5310023f6144,fastjson
+#3976, 高铁, Merge pull request #1514 from kimmking/master   remove DEFFAULT_LOCAL_DATE_TIME_FORMAT and modify testcase, https://github.com/alibaba/fastjson/commit/dd30ab7f04a740de94a224f5fa0d4ac65f5ddb13,fastjson
+#3976, kimmking, fix #1493, https://github.com/alibaba/fastjson/commit/181d423fbb50dd157209d11ac872c73d0e224bd8,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, improved date parse support., https://github.com/alibaba/fastjson/commit/2b9a6afb5386ddaa2c308dc75efe9747cfc00340,fastjson
+#3976, 高铁, bug fixed for issue 331. https://github.com/alibaba/fastjson/issues/331, https://github.com/alibaba/fastjson/commit/8d74f9e5a034888610ca3199807e2eec64178210,fastjson
+#3976, wenshao, imporved date timezone support. bug fixed for issue #1482, https://github.com/alibaba/fastjson/commit/ffa02d528d1bb83476cba8d591d8ed1306775b75,fastjson
+#3976, wenshao, full support ISO8601 dateformat, https://github.com/alibaba/fastjson/commit/ce3c5465bdbb55bce36f9acd02704fb9c04207c8,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, bug fixed for bool parse. for issue #1422, https://github.com/alibaba/fastjson/commit/1f98b0ea33fa9e060f80be84371002caf47e859d,fastjson
+#3976, wenshao, improved basic number parse performance., https://github.com/alibaba/fastjson/commit/29b669a6704ccac7f1d7f4163005abcc3500b161,fastjson
+#3976, wenshao, bug fixed for long overflow parse. issue #1423, https://github.com/alibaba/fastjson/commit/26990ad3bfb4554e944f2d2da45fcc08b8786906,fastjson
+#3976, wenshao, improved basic number parse performance., https://github.com/alibaba/fastjson/commit/02e9deba3f6e4356a89d54d86adac379fd5de8f4,fastjson
+#3976, wenshao, improved datacodec., https://github.com/alibaba/fastjson/commit/3e890923fe6ca351f287bc4c5452907ec9e4f365,fastjson
+#3976, 高铁, bug fixed for issue 331. https://github.com/alibaba/fastjson/issues/331, https://github.com/alibaba/fastjson/commit/8d74f9e5a034888610ca3199807e2eec64178210,fastjson
+#3976, wenshao, improved basic number parse performance., https://github.com/alibaba/fastjson/commit/02e9deba3f6e4356a89d54d86adac379fd5de8f4,fastjson
+#3976, wenshao, improved basic number parse performance., https://github.com/alibaba/fastjson/commit/29b669a6704ccac7f1d7f4163005abcc3500b161,fastjson
+#3976, wenshao, improved SerializeFeature.BrowserSecure performance., https://github.com/alibaba/fastjson/commit/236a43a8776312c8e10d1937ff2bc471a9d1644e,fastjson
+#3976, wenshao, bug fixed for BrowserSecure., https://github.com/alibaba/fastjson/commit/37088117491811f060c518fcd0761cd5a195d8fa,fastjson
+#3976, 高铁, Merge pull request #1372 from neil4dong/master  For issue 1367 Spring FastJsonHttpMessageConverter Support ParamterizedType and TypeVariable, https://github.com/alibaba/fastjson/commit/57258449befabf639179a2392e01faff15b19fae,fastjson
+#3976, wenshao, Merge branch 'master' of https://github.com/alibaba/fastjson, https://github.com/alibaba/fastjson/commit/7effec024677594f33c449bd3a62b20e1a77469b,fastjson
+#3976, wenshao, bug fixed for issue #1320, https://github.com/alibaba/fastjson/commit/f6ac9160a3727b94c0926e82955480157939eba9,fastjson
+#3976, wenshao, bug fixed for multi-level inherit generic. for issue #1225, https://github.com/alibaba/fastjson/commit/771af47385330bf0505b47527698d055d883ddf5,fastjson
+#3976, 高铁, Merge pull request #1308 from kimmking/master  fixed #1306 and add 2 testcases for #1306 #1307, https://github.com/alibaba/fastjson/commit/5cadde0ea39d2d50bf46e244d15c43b0f0d336ed,fastjson
+#3976, wenshao, bug fixed for multi-level inherit generic. for issue #1225, https://github.com/alibaba/fastjson/commit/771af47385330bf0505b47527698d055d883ddf5,fastjson
+#3976, kimmking, fixed #1306 and add 2 testcases for #1306 #1307, https://github.com/alibaba/fastjson/commit/a527bc9cc72b07cefd209e4bf5e82b330dec9e16,fastjson
+#3976, wenshao, bug fixed for multi-level inherit generic. for issue #1225, https://github.com/alibaba/fastjson/commit/771af47385330bf0505b47527698d055d883ddf5,fastjson
+#3976, kimmking, Merge pull request #4 from alibaba/master  merge, https://github.com/alibaba/fastjson/commit/4fe3a168817770f7c746c871d5f48e2eded19435,fastjson
+#3976, wenshao, bug fixed for generic., https://github.com/alibaba/fastjson/commit/ce055537903a4f9e2c62116a0f76c2d93b287584,fastjson
+#3976, wenshao, bug fixed for multi-level inherit generic. for issue #1225, https://github.com/alibaba/fastjson/commit/771af47385330bf0505b47527698d055d883ddf5,fastjson
+#3976, wenshao, bug fixed for generic., https://github.com/alibaba/fastjson/commit/ce055537903a4f9e2c62116a0f76c2d93b287584,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, date parse support '0000-00-00'., https://github.com/alibaba/fastjson/commit/807f81c84647f6a13078cb6830c472dc6c34bc5c,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, bug fixed for TypeUtils. for issue #1178, https://github.com/alibaba/fastjson/commit/ce11a7b93725d2bfa8b492beff8a29fe853e0d5f,fastjson
+#3976, 高铁, bug fixed for issue 489. https://github.com/alibaba/fastjson/issues/489, https://github.com/alibaba/fastjson/commit/56272ce478a1542972598a0d6ad699436139dfbb,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, bug fixed for List/Array parse support empty string. for issue #1150, https://github.com/alibaba/fastjson/commit/66978ef79aeea3e0b9b701324156245455286dc3,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, refactor, remove reset, use parseRest, https://github.com/alibaba/fastjson/commit/b15b193dada750a818a34211ee3990d6ac7b56c7,fastjson
+#3976, wenshao, bug fixed for ZonedDateTime decode. issue #980, https://github.com/alibaba/fastjson/commit/6a787a70ca58be7ac59193ba8ea76c4bb5508374,fastjson
+#3976, 高铁, improved JSONField(format=xxxx) support, https://github.com/alibaba/fastjson/commit/2541a486971999d80270e5cd4c336f3feb57a187,fastjson
+#3976, 高铁, Merge pull request #941 from wuwen5/fixed#849#937  Fixed#849#937, https://github.com/alibaba/fastjson/commit/3e2e08d691e2d96beef2770ee543ac241960addc,fastjson
+#3976, wenshao, bug fixed for issue #849 . improved TypeRerence Performance., https://github.com/alibaba/fastjson/commit/e4562183cf45c0c5f77c446350da6b89ccf49687,fastjson
+#3976, wuwen, fixed for issue #849(improved TypeRerence Performance) and #937, https://github.com/alibaba/fastjson/commit/0ffcd17389e26eba0873fcb34e5ae03c8bf3e230,fastjson
+#3976, wenshao, bug fixed for issue #849 . improved TypeRerence Performance., https://github.com/alibaba/fastjson/commit/e4562183cf45c0c5f77c446350da6b89ccf49687,fastjson
+#3976, wenshao, bug fixed for AwtCodec reference handle. issue #869, https://github.com/alibaba/fastjson/commit/0b13393c98b98956dd01f06963c06edba3f21594,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, bug fixed for private constructor parser., https://github.com/alibaba/fastjson/commit/5040b39b53b5b007622d8e503e0f619704413a9d,fastjson
+#3976, 高铁, removed ASMJavaBeanDeserializer, direct extends JavaBeanDeserializer, https://github.com/alibaba/fastjson/commit/f9138d227ab4538bcf7df6f74a2fcb81fe504733,fastjson
+#3976, wenshao, bug fixed for references. for jsonarray ref compute error., https://github.com/alibaba/fastjson/commit/2a5e510ac9ba25883cb395565ecb3b74511e2b65,fastjson
+#3976, 高铁, bug fixed for reference, https://github.com/alibaba/fastjson/issues/522, https://github.com/alibaba/fastjson/commit/dba0e92448284de00159f8933842d2f10bc13259,fastjson
+#3976, wenshao, support emptyArray as null, https://github.com/alibaba/fastjson/commit/a5ff008817e78f6ed0fea6bafb6cc113f38f3638,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, yakolee, bug fixed for special char, https://github.com/alibaba/fastjson/commit/30e081e7402024c5b113e8523521784a1841c920,fastjson
+#3976, wenshao, chinese space '\u00A0' is not used as escape character. #690, https://github.com/alibaba/fastjson/commit/2f0ca7901c4ba279de364ebc0ef357bed60c179b,fastjson
+#3976, yakolee, bug fixed for special char, https://github.com/alibaba/fastjson/commit/30e081e7402024c5b113e8523521784a1841c920,fastjson
+#3976, wenshao, bug fixed for jsoncreator primive type default values. issue #802, https://github.com/alibaba/fastjson/commit/a3583311b4719119484adea4931bf02c1a3d69a6,fastjson
+#3976, wenshao, refactor, remove reset, use parseRest, https://github.com/alibaba/fastjson/commit/b15b193dada750a818a34211ee3990d6ac7b56c7,fastjson
+#3976, wenshao, improved date parse. issue #801, https://github.com/alibaba/fastjson/commit/e819dfb875ffc256c77cb213486cd8e07eea7ec8,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, bug fixed for issue #771, https://github.com/alibaba/fastjson/commit/733314a465af6850e65feee1060802e683a8b6eb,fastjson
+#3976, 高铁, bug fixed for List<String> write error, https://github.com/alibaba/fastjson/commit/01d010d303aa0d0173662d47261ce10ce14fd872,fastjson
+#3976, wenshao, CLOSED - issue FASTJSON-109: 添加WriteTabAsSpecial选项  http://code.alibabatech.com/jira/browse/FASTJSON-109  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1466 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/be167060cba49aa15fd600b0f878eda2048a4eaa,fastjson
+#3976, 高铁, enum parse support empty string. bug fixed for issue #676., https://github.com/alibaba/fastjson/commit/c0b2b4d1812e56db4a1489ebd22b8bbea5751225,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, 高铁, improved jdk8 LocalDateTime parse autodetect, https://github.com/alibaba/fastjson/commit/c1d93b79ae3cd864b761e246be298625b011f261,fastjson
+#3976, 高铁, jdk8 datetime codec use default date format, https://github.com/alibaba/fastjson/commit/3b752614d466c5ecab0890788d9e6e7f13da2943,fastjson
+#3976, 高铁, support JSONField dateFormat parser config. for issue 627. https://github.com/alibaba/fastjson/issues/627, https://github.com/alibaba/fastjson/commit/f1fe465bcddfb2b6f193b5951c374ff5bb4a5fe7,fastjson
+#3976, wenshao, 序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1424 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/922838f16df3954e9eedffda7536d420e54472b6,fastjson
+#3976, 高铁, bug fixed gereric base class, for issue 604. https://github.com/alibaba/fastjson/issues/604, https://github.com/alibaba/fastjson/commit/2b90431db08051bff54cb4bf51117ecde6bd49f1,fastjson
+#3976, 高铁, bug fixed for generic, https://github.com/alibaba/fastjson/commit/3bd528016c73f57af8d78646efe224b14aa56fe5,fastjson
+#3976, 高铁, bug fixed, https://github.com/alibaba/fastjson/commit/1fd037b4c9390adf25fdd7f9f7f648c7d68b6ab1,fastjson
+#3976, 高铁, refactor for serialize performance, https://github.com/alibaba/fastjson/commit/495824fc55d76329216e49df99093d61791ab05a,fastjson
+#3976, 高铁, bug fixed for class_level_filter, https://github.com/alibaba/fastjson/commit/413786cf8982399fc3ec0e481a9165c69efd63fa,fastjson
+#3976, 高铁, bug fixed for class_level_filter, https://github.com/alibaba/fastjson/commit/739adc51e6b9134a69fe2bb39ccb26f981be41f9,fastjson
+#3976, 高铁, bug fixed for scanFieldListArray, https://github.com/alibaba/fastjson/commit/aaea86e32526ece560a2403ed0d9c2cbc82a9393,fastjson
+#3976, 高铁, bug fixed for BeanToArray enum null value parse, https://github.com/alibaba/fastjson/commit/84e4d52fb941a60317e257e60a23de31cde360ca,fastjson
+#3976, 高铁, improved scanFieldStringArray, https://github.com/alibaba/fastjson/commit/b5629a05819a5e09560da170e23e446a96e3b810,fastjson
+#3976, 高铁, improved deserialzeArrayMapping, https://github.com/alibaba/fastjson/commit/c71dd0b58d8db5bae835c84b1d80e8823908b17b,fastjson
+#3976, VictorZeng, Merge pull request #9 from alibaba/master  merge, https://github.com/alibaba/fastjson/commit/c1779fc2eb69bbef2e2387d7d2318b4cda981a4d,fastjson
+#3976, 高铁, add testcase, https://github.com/alibaba/fastjson/commit/2a746a5f60c5d270f3963205b6f92444285d6b30,fastjson
+#3976, 高铁, improved performance, https://github.com/alibaba/fastjson/commit/29f6dd1121f59e29150b349e701b18794a554405,fastjson
+#3976, Victor Zeng, Merge remote-tracking branch 'alibaba/master', https://github.com/alibaba/fastjson/commit/01e2f4528144ccf4a7c776388ae890461b6de3d0,fastjson
+#3976, 高铁, improved performance, https://github.com/alibaba/fastjson/commit/29f6dd1121f59e29150b349e701b18794a554405,fastjson
+#3976, 高铁, refactor, https://github.com/alibaba/fastjson/commit/b58c45bbc64b4c55268717bba2051f9a5be98358,fastjson
+#3976, 高铁, bug fixed for List<String> write error, https://github.com/alibaba/fastjson/commit/01d010d303aa0d0173662d47261ce10ce14fd872,fastjson
+#3976, VictorZeng, Merge pull request #5 from alibaba/master  merge, https://github.com/alibaba/fastjson/commit/0919985a53735120e1fbd8daa31cf482a77923b5,fastjson
+#3976, 高铁, refactor, https://github.com/alibaba/fastjson/commit/b58c45bbc64b4c55268717bba2051f9a5be98358,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, 高铁, support final Map/Collection field deserialize, https://github.com/alibaba/fastjson/commit/eab37eb7ebd093cc66c6cc1b8d2ce6632d6c674c,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, 高铁, bug fixed for ValueFilter, https://github.com/alibaba/fastjson/commit/204a2e4d80fa34017e5a3858f9305a25d1337a88,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, 高铁, bug fixed for ValueFilter, https://github.com/alibaba/fastjson/commit/ec7b6c3d7fe1b5d3c9ae23b5f41241c0b423c0fe,fastjson
+#3976, 高铁, improved performance, https://github.com/alibaba/fastjson/commit/0c88e4961730aa81bffcaf8f480193095a114937,fastjson
+#3976, 高铁, improved performance, https://github.com/alibaba/fastjson/commit/0c88e4961730aa81bffcaf8f480193095a114937,fastjson
+#3976, 高铁, bug fixed for reference, https://github.com/alibaba/fastjson/commit/46f6125c56148344a127ffa5c7e683b09e969f4e,fastjson
+#3976, wenshao, add testcase & refactor, https://github.com/alibaba/fastjson/commit/62803c6b94b5e7b767288c3424e7749ffb49eb20,fastjson
+#3976, 高铁, bug fixed for issue 280. https://github.com/alibaba/fastjson/issues/280, https://github.com/alibaba/fastjson/commit/2eeb98970ed4edd4495b71b67412211e5d46666b,fastjson
+#3976, wenshao, fixed version number, https://github.com/alibaba/fastjson/commit/8149502733e4904f215218b94c74be51c61c1123,fastjson
+#3976, 高铁, bug fixed for issue 283. https://github.com/alibaba/fastjson/issues/283, https://github.com/alibaba/fastjson/commit/c06bab584fdb57cf0daae811ad2ccba64e467580,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, 修正ASM模式关闭时，Properties字段反序列化出错  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1386 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/37fa9d8987c7c1142e65babc3bd7d55de674472c,fastjson
+#3976, 高铁, improved performance, https://github.com/alibaba/fastjson/commit/29f6dd1121f59e29150b349e701b18794a554405,fastjson
+#3976, wenshao, full support ISO8601 dateformat, https://github.com/alibaba/fastjson/commit/ce3c5465bdbb55bce36f9acd02704fb9c04207c8,fastjson
+#3976, 高铁, bug fixed for reference, https://github.com/alibaba/fastjson/issues/522, https://github.com/alibaba/fastjson/commit/dba0e92448284de00159f8933842d2f10bc13259,fastjson
+#3976, 高铁, bug fixed for issue 504, https://github.com/alibaba/fastjson/commit/994ef3c54ab84a9cba8849de36b36affac5db790,fastjson
+#3976, wenshao, refactor, remove reset, use parseRest, https://github.com/alibaba/fastjson/commit/b15b193dada750a818a34211ee3990d6ac7b56c7,fastjson
+#3976, wenshao, 1.1.8  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1460 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/76da49cce6107ff399427ee12cbb7379744a70f2,fastjson
+#3976, wenshao, improve performance, https://github.com/alibaba/fastjson/commit/44b945b2ba2a72dc36ecae3ad68c01f0bd353b5f,fastjson
+#3976, wenshao, bugfixed for issue 109, support BAE, https://github.com/alibaba/fastjson/commit/d693fc8b114ac30315bfe764d4c1d020f77ed4ab,fastjson
+#3976, wenshao, bug fixed for issue124, concurrent error, https://github.com/alibaba/fastjson/commit/1d56e29f7ae0a1f104befa4352d6965962b02607,fastjson
+#3976, ptma, Merge branch 'master' of https://github.com/alibaba/fastjson, https://github.com/alibaba/fastjson/commit/49cc9abaf76d648653301d05e255720e4d804cc8,fastjson
+#3976, wenshao, support interface Annotation, https://github.com/alibaba/fastjson/commit/b1632dc171b80d3146bb27ae8a4eb79a50b0b77a,fastjson
+#3976, axmanwang, Merge branch 'master' of https://github.com/AlibabaTech/fastjson, https://github.com/alibaba/fastjson/commit/3d09404541279798a14a090ec4d24ba596b33b1f,fastjson
+#3976, wenshao, for device compatible, for ios, web browser, https://github.com/alibaba/fastjson/commit/105ff2098182ab62a31ae001549f767f9a15634c,fastjson
+#3976, yakolee, improve json parser, https://github.com/alibaba/fastjson/commit/1e6aa71dcc05ea59e427f8f399c2f7cde370a544,fastjson
+#3976, wenshao, fastjson-1.1.40, https://github.com/alibaba/fastjson/commit/4da1cd0231519a74cee0a04a061c89efc1176df0,fastjson
+#3976, wenshao, for device compatible, for ios, web browser, https://github.com/alibaba/fastjson/commit/105ff2098182ab62a31ae001549f767f9a15634c,fastjson
+#3976, wenshao, bug fixed for special char, https://github.com/alibaba/fastjson/commit/0d796ea63264a74c751718e5e806e9268f030a18,fastjson
+#3976, wenshao, add testcase & remove unused code, https://github.com/alibaba/fastjson/commit/74141bd7edd0da0956ef1efd9702e76e2a36a6fd,fastjson
+#3976, wenshao, improve support invisible chars, https://github.com/alibaba/fastjson/commit/f56369e3bb39c501e9ef969a93c253f6701c8648,fastjson
+#3976, wenshao, bug for long type builder setter, https://github.com/alibaba/fastjson/commit/cd21cc48c5b8564bab62d1bd262fe89290d64d45,fastjson
+#3976, 温少, support builder's set, https://github.com/alibaba/fastjson/commit/63e685d4df52a0b8e0242d19f7bfbe40dce98711,fastjson
+#3976, wenshao, improve getter/setter support, https://github.com/alibaba/fastjson/commit/e9c05c373af0da203a61a2b886104d9e64a51f18,fastjson
+#3976, wenshao, fixed compatible problem, https://github.com/alibaba/fastjson/commit/c89809ff4fad848a15b2e4b44913665d939b0f3d,fastjson
+#3976, wenshao, add testcase & remove unused code, https://github.com/alibaba/fastjson/commit/6f5dfc75fd67925f6d96f75c6f014f4b081e7300,fastjson
+#3976, wenshao, improve getter/setter support, https://github.com/alibaba/fastjson/commit/e9c05c373af0da203a61a2b886104d9e64a51f18,fastjson
+#3976, wenshao, add testcase & remove unused code, https://github.com/alibaba/fastjson/commit/618c5deda4be5679ec640539d81d2c3fe50b88ca,fastjson
+#3976, wenshao, refactor, remove reset, use parseRest, https://github.com/alibaba/fastjson/commit/b15b193dada750a818a34211ee3990d6ac7b56c7,fastjson
+#3976, 高铁, fix #3631, https://github.com/alibaba/fastjson/commit/ba07c7fbda7ffb4f5fad24f5d02c03794db8c7c9,fastjson
+#3976, 高铁, bug fixed, https://github.com/alibaba/fastjson/commit/a9117d9436c8f23e0928798b7ae72b69d5282155,fastjson
+#3976, 温绍锦, Merge pull request #3474 from fanzhongwei/master  fix issue https://github.com/alibaba/fastjson/issues/3473, https://github.com/alibaba/fastjson/commit/1ccd0f19e72487545ba01078928b99aebc92505d,fastjson
+#3976, shaojin.wensj, java.sql.Date use 'yyy-MM-dd' format, for issue #2156, https://github.com/alibaba/fastjson/commit/52652252e7095ecb11bfe8baddd2a087c04fa14e,fastjson
+#3976, 温绍锦, Merge pull request #3475 from akiyamaneko/AfterFilter-NullPointerException  fix AfterFilter NullPointer exception in #3443, https://github.com/alibaba/fastjson/commit/4a9ca8518545eaf6d2f3d3e437b2d2af0af57bff,fastjson
+#3976, 高铁, bug fixed for writeAfter, fix #3150 #3342, https://github.com/alibaba/fastjson/commit/010691b365090a312d096dde96059d4fd2cb90ea,fastjson
+#3976, fanzhongwei, fix issue https://github.com/alibaba/fastjson/issues/3473, https://github.com/alibaba/fastjson/commit/5ca2b3bd42add17fe2c4ff56d88ea5cfd457ae30,fastjson
+#3976, shaojin.wensj, java.sql.Date use 'yyy-MM-dd' format, for issue #2156, https://github.com/alibaba/fastjson/commit/52652252e7095ecb11bfe8baddd2a087c04fa14e,fastjson
+#3976, blindarcheology, Merge pull request #1 from alibaba/master  update form fork, https://github.com/alibaba/fastjson/commit/7a63aa6ff33e0ad34023d70a56c621cd8886394e,fastjson
+#3976, wenshao, bug fixed for issue #849 . improved TypeRerence Performance., https://github.com/alibaba/fastjson/commit/e4562183cf45c0c5f77c446350da6b89ccf49687,fastjson
+#3976, 温绍锦, Merge pull request #3304 from ZivYan/Issue#3227  Fix Issues 3277：Method Overriding generics #3277, https://github.com/alibaba/fastjson/commit/97b01a76efa7940c28f2f182c51e4b856fa36d75,fastjson
+#3976, Mingjun Liu, fix misspell instance word, https://github.com/alibaba/fastjson/commit/8bdcdab078afe5edc116eea70ec4a8219bc450e6,fastjson
+#3976, 温绍锦, Merge pull request #3316 from ZivYan/Issue#3312  bug fixed for smartMatchField, #3312, https://github.com/alibaba/fastjson/commit/e4c86bb66a3a2b521178848adf0c50a5d842f777,fastjson
+#3976, 高铁, bug fixed for smartMatchField, #3246, https://github.com/alibaba/fastjson/commit/18a99f2d449321393f57d50e2fbf35ca5748fae5,fastjson
+#3976, nanqi, bug fixed for smartMatchField, #3312, https://github.com/alibaba/fastjson/commit/341fc39f1b341ff1574e83c6cf51536cce758fcf,fastjson
+#3976, 高铁, improved jsonpath support, https://github.com/alibaba/fastjson/commit/d0ddf9cbbe6837ad27c289a6bad243c36b7f145e,fastjson
+#3976, 高铁, support empty immutable collection & map deserialize., https://github.com/alibaba/fastjson/commit/c758b1f79bf2078f50e0c922058a2ba92cd14314,fastjson
+#3976, wenshao, support getOnly Collection Property, https://github.com/alibaba/fastjson/commit/1d4d2472ba350aa5bc6107d6650cb42897f258b1,fastjson
+#3976, 高铁, bug fixed for ref, https://github.com/alibaba/fastjson/commit/d672cc22ae2857406da3f2acf2fe6a0d2346224f,fastjson
+#3976, wenshao, bug fixed for jsonpath., https://github.com/alibaba/fastjson/commit/d77d469a821373f6b4ac8bc52306e35fd41b0a34,fastjson
+#3976, 高铁, bug fixed for toJavaObject, https://github.com/alibaba/fastjson/commit/c8c0005a1c00a3ac7622c87f9733147611494361,fastjson
+#3976, shaojin.wensj, improved JSONObject.toJavaObject performance, https://github.com/alibaba/fastjson/commit/7b416faa1015ce04505e88d1f9b0575bcf13657f,fastjson
+#3976, 高铁, bug fixed for scanFieldString & scanFieldSymbol, https://github.com/alibaba/fastjson/commit/70eaae0eb5307be0d9701037c1d2e8067cc5aeba,fastjson
+#3976, 高铁, improved json scanner, https://github.com/alibaba/fastjson/commit/67d54ae4f14418e3f9b7df7339b62e093bb0fdfa,fastjson
+#3976, chenjiechuan 00492660, Merge branch 'master' of https://github.com/alibaba/fastjson into fix-issue3061, https://github.com/alibaba/fastjson/commit/0e257a3f8c96588d04e128668a61bf9ff6d0f720,fastjson
+#3976, chenjiechuan 00492660, fixes #3061, https://github.com/alibaba/fastjson/commit/2f1127017be74efe89a16eb08d83dd629728faa2,fastjson
+#3976, chenjiechuan 00492660, Merge branch 'master' of https://github.com/alibaba/fastjson into fix-issue3079, https://github.com/alibaba/fastjson/commit/485bf7d5119dc8b9599f1adcc542aa84d98c54c7,fastjson
+#3976, 高铁, improved timestamp support, https://github.com/alibaba/fastjson/commit/6e53cca3c60182d91db31c1a8a89e58c3fc4195d,fastjson
+#3976, 高铁, bug fixed for Timestamp serialize, https://github.com/alibaba/fastjson/commit/4f02ba33c30d9fa3c1d2b5623afa891f5bd2493f,fastjson
+#3976, 高铁, improved timestamp support, https://github.com/alibaba/fastjson/commit/6e53cca3c60182d91db31c1a8a89e58c3fc4195d,fastjson
+#3976, 高铁, improved jsonpath support, https://github.com/alibaba/fastjson/commit/7154e20e0fa11675b700d9812d3f4da1b599325f,fastjson
+#3976, wenshao, improved reference support. for issue #1363, https://github.com/alibaba/fastjson/commit/21c2f4b2f963c044e4adafef4ddd966661526af9,fastjson
+#3976, 高铁, parser auto dateFormat support 'yyyy-MM-d HH:mm:ss', #3049, https://github.com/alibaba/fastjson/commit/97d0eb057803450f7cf5f6a5b67a09427880d919,fastjson
+#3976, 高铁, bug fixed for issue 331. https://github.com/alibaba/fastjson/issues/331, https://github.com/alibaba/fastjson/commit/8d74f9e5a034888610ca3199807e2eec64178210,fastjson
+#3976, 高铁, bug fixed for handle '$ref' key, https://github.com/alibaba/fastjson/commit/89f0721acd6d121ea4dddbd3974537b2bb3ddd58,fastjson
+#3976, wenshao, improved reference support. for issue #1363, https://github.com/alibaba/fastjson/commit/21c2f4b2f963c044e4adafef4ddd966661526af9,fastjson
+#3976, 高铁, improved beanToArray support, https://github.com/alibaba/fastjson/commit/7f41acca74fa517748b13667cc8da5d4b7b6e7b3,fastjson
+#3976, wenshao, bug fixed for JSONType.orders config deserializer., https://github.com/alibaba/fastjson/commit/7ba142b66750a998694ea9a40a24daa8de7fccfa,fastjson
+#3976, 高铁, object key & array maximum level limitation, https://github.com/alibaba/fastjson/commit/fbac83f3ec563d80aeb6929c1e4bdffbd98c5117,fastjson
+#3976, wenshao, bug fixed for multi-level-TypeReference parse, https://github.com/alibaba/fastjson/commit/dc06b690e00cf5a984711e254149c3037b413a99,fastjson
+#3976, 温绍锦, Merge pull request #2748 from Omega-Ariston/fix-issue2736  Fix issue2736(JSONObject.keySet()中可能包含非String键), https://github.com/alibaba/fastjson/commit/30824c9fc7cffe0e564952160e381fbd494ee161,fastjson
+#3976, wenshao, bug fixed JSONField.serializeFeature.WriteClassName, https://github.com/alibaba/fastjson/commit/33eaec097f6cf7c23c7cf8dc08f9ca7b21f9f54c,fastjson
+#3976, 温绍锦, Merge pull request #2725 from Omega-Ariston/fix-issue2628  修复反序列化BigInteger类属性值不一致的问题, https://github.com/alibaba/fastjson/commit/bb937b92d6ca9d2bf6b532727f2e314219e4805c,fastjson
+#3976, wenshao, improved BigDecimal/BigInteger property performance., https://github.com/alibaba/fastjson/commit/1d860af51a28a4b1f5fb2d9aefaf03f4422b5141,fastjson
+#3976, Omega-Ariston, fix issue #2628, https://github.com/alibaba/fastjson/commit/78ef9d8669aebdf3dfa31cedb592cd8c099fe2d2,fastjson
+#3976, wenshao, improved BigDecimal/BigInteger property performance., https://github.com/alibaba/fastjson/commit/1d860af51a28a4b1f5fb2d9aefaf03f4422b5141,fastjson
+#3976, 高铁, bug fixed for cast to JSONObject & List<JSONObject>, https://github.com/alibaba/fastjson/commit/1cd7ae743ad5f4da9224617546df27d456eae2d8,fastjson
+#3976, shaojin.wensj, improved JSONObject.toJavaObject performance, https://github.com/alibaba/fastjson/commit/7b416faa1015ce04505e88d1f9b0575bcf13657f,fastjson
+#3976, chenjiechuan 00492660, Merge branch 'master' of https://github.com/alibaba/fastjson into fix-deserializer-typo, https://github.com/alibaba/fastjson/commit/966ff88dc9a6d7b51df39e2bf726061ba25e6485,fastjson
+#3976, shaojin.wensj, improved JSONObject.toJavaObject performance, https://github.com/alibaba/fastjson/commit/7b416faa1015ce04505e88d1f9b0575bcf13657f,fastjson
+#3976, 高铁, bug fix toJavaObject, for issue #2516, https://github.com/alibaba/fastjson/commit/77315628fbe635ec417bc45c237527577092e742,fastjson
+#3976, shaojin.wensj, improved JSONObject.toJavaObject performance, https://github.com/alibaba/fastjson/commit/7b416faa1015ce04505e88d1f9b0575bcf13657f,fastjson
+#3976, 高铁, bug fix for Field & Getter Type Not Match, https://github.com/alibaba/fastjson/commit/fab95ad30d827fd66a5714f67c2ba29c73cbe8f2,fastjson
+#3976, shaojin.wensj, improved JSONObject.toJavaObject performance, https://github.com/alibaba/fastjson/commit/7b416faa1015ce04505e88d1f9b0575bcf13657f,fastjson
+#3976, 高铁, bug fixed for json path, https://github.com/alibaba/fastjson/commit/e47675f6cd81745cb608d209420845746c162880,fastjson
+#3976, wenshao, bug fixed for jsonpath. issue #735, https://github.com/alibaba/fastjson/commit/178fc2df6677c70cd1bd390ed59cf846260fa40a,fastjson
+#3976, shaojin.wensj, bug fixed for smark field match, for issue #2348, https://github.com/alibaba/fastjson/commit/f5e9d59a441601f517a1cc9efe10d5ee72864ca8,fastjson
+#3976, 高铁, parser support filedName like 'message_id', https://github.com/alibaba/fastjson/commit/12fd92fb1c41e5b9aa6ec4455d8802911e179052,fastjson
+#3976, shaojin.wensj, write reference except Collections.emptyMap(), for issue #2240, https://github.com/alibaba/fastjson/commit/a117a37cdf8172748dde4c00d06fca06a0ef29c4,fastjson
+#3976, wenshao, 1.1.8  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1460 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/76da49cce6107ff399427ee12cbb7379744a70f2,fastjson
+#3976, 业余布道师, Optimize FastJsonRedisSerializer., https://github.com/alibaba/fastjson/commit/dec2613040360d2f712ec6b8b2e7f67dabc9f180,fastjson
+#3976, 业余布道师, Merge branch 'master' of https://github.com/alibaba/fastjson, https://github.com/alibaba/fastjson/commit/50b3af50de60e8251e6065e3e226007b5bb41f74,fastjson
+#3976, 业余布道师, Merge branch 'master' of https://github.com/alibaba/fastjson, https://github.com/alibaba/fastjson/commit/0d272644b4ff43684260486629adc3e99cd45b66,fastjson
+#3976, wenshao, improved float/double parse performance., https://github.com/alibaba/fastjson/commit/ef6c08a304ba53d376d8dcde9c4eff2476e27b40,fastjson
+#3976, shaojin.wensj, bug fixed for parseFloat, https://github.com/alibaba/fastjson/commit/17e56f9c6b1e650c1ea9190d479ad390111234f1,fastjson
+#3976, wenshao, improved float/double parse performance., https://github.com/alibaba/fastjson/commit/ef6c08a304ba53d376d8dcde9c4eff2476e27b40,fastjson
+#3976, wenshao, improved castToInt, https://github.com/alibaba/fastjson/commit/93790a2257e8b7776f8e87fee2d5072618ad0b66,fastjson
+#3976, wenshao, refactor cast to byte/short/int/long, https://github.com/alibaba/fastjson/commit/37bd050e90535b0d58940eb2c406de4faee159f7,fastjson
+#3976, wenshao, bug fixed for encodeUTF8, https://github.com/alibaba/fastjson/commit/bc66781b54314972cf07d0ca4a4a68a6d2bc169a,fastjson
+#3976, 高铁, improved toBytes & writeJSONString performance, https://github.com/alibaba/fastjson/commit/6594789438cea10cecb9799a32138d2eddb4cba4,fastjson
+#3976, wenshao, bug fixed for LabelFilter, for issue #1856, https://github.com/alibaba/fastjson/commit/15dead6fcbb32402b9a3a4802c24f1780d6e1901,fastjson
+#3976, 高铁, refactor, https://github.com/alibaba/fastjson/commit/34342bec4f11298c9a52997ad066c19e47726e1e,fastjson
+#3976, zgray, bug fixed for issue #1884, https://github.com/alibaba/fastjson/commit/57aff945aae44d0adb86467133b3e3dc19044d5e,fastjson
+#3976, zgray, fix: 解决在解析ISO8601不带毫秒的数值时，毫秒依然有值的问题。  fixed #1884, https://github.com/alibaba/fastjson/commit/ba07795057a92f6af12191d5c74fff1649725565,fastjson
+#3976, wenshao, bug fixed for float parse. for issue #1723, https://github.com/alibaba/fastjson/commit/07e7ba5982fe0ba3e8a75ba034102d8d71c1f1d0,fastjson
+#3976, wenshao, improved float/double parse performance., https://github.com/alibaba/fastjson/commit/ef6c08a304ba53d376d8dcde9c4eff2476e27b40,fastjson
+#3976, wenshao, bug fixed for scanFloat. for issue #1723, https://github.com/alibaba/fastjson/commit/f5b7a5fce0b61e7150bb27813135e1b1efb97b46,fastjson
+#3976, wenshao, improved float/double parse performance., https://github.com/alibaba/fastjson/commit/ef6c08a304ba53d376d8dcde9c4eff2476e27b40,fastjson
+#3976, wenshao, bug fixed for toJavaObject. for issue #1727, https://github.com/alibaba/fastjson/commit/57f99a33a0e2870c47bc3e43a4db06dd573b3503,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, bug fixed for issue #1603, https://github.com/alibaba/fastjson/commit/362eb79838854c1b18ea8bbd456b296dde402b30,fastjson
+#3976, wenshao, improve support readonly type, such as AtomicInteger, AtomicLong, AtomicBoolean, Map, https://github.com/alibaba/fastjson/commit/0c4f90d55d1aff4d011accd1cfefb59033551100,fastjson
+#3976, wenshao, bug fixed for WriteNullBooleanAsFalse. for issue #1570, https://github.com/alibaba/fastjson/commit/1804c85adea41809d9d171fbc271c2f53af93edf,fastjson
+#3976, wenshao, improved SerializeFeature user experience. issue #867, https://github.com/alibaba/fastjson/commit/91e9164ce5217f3f1710882898cac511e1aae458,fastjson
+#3976, wenshao, improved deserialize for Map.Entry. bug fixed for issue #1583, https://github.com/alibaba/fastjson/commit/c4343c398b1ab609251bad4c13112a428aaa62ec,fastjson
+#3976, 高铁, Merge pull request #1501 from neil4dong/master  修复在FastJsonHttpMessageConverter 中使用了spring4.x版本新增的TypeResolvable 导致sp…, https://github.com/alibaba/fastjson/commit/020aefbaadf8cee2916bcfd552bdf66ec6b6e830,fastjson
+#3976, Neil Dong, Merge pull request #5 from alibaba/master  pull upstream, https://github.com/alibaba/fastjson/commit/a97885cf1239701c7446a5bfe548f7dd3c00a5e2,fastjson
+#3976, wenshao, improved smart match performance., https://github.com/alibaba/fastjson/commit/b1222868654e6d508374110ae35e48613acc45ea,fastjson
+#3976, wenshao, bug fixed for 'is' prefix fieldName smartMatch. for issue #1529, https://github.com/alibaba/fastjson/commit/654ea41bb0187863eb2db7ab6528c081850183b8,fastjson
+#3976, wenshao, update to 1.1.60.android, https://github.com/alibaba/fastjson/commit/246767658d5b3832e479394aa4ea5310023f6144,fastjson
+#3976, 高铁, Merge pull request #1514 from kimmking/master   remove DEFFAULT_LOCAL_DATE_TIME_FORMAT and modify testcase, https://github.com/alibaba/fastjson/commit/dd30ab7f04a740de94a224f5fa0d4ac65f5ddb13,fastjson
+#3976, kimmking, fix #1493, https://github.com/alibaba/fastjson/commit/181d423fbb50dd157209d11ac872c73d0e224bd8,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, improved date parse support., https://github.com/alibaba/fastjson/commit/2b9a6afb5386ddaa2c308dc75efe9747cfc00340,fastjson
+#3976, 高铁, bug fixed for issue 331. https://github.com/alibaba/fastjson/issues/331, https://github.com/alibaba/fastjson/commit/8d74f9e5a034888610ca3199807e2eec64178210,fastjson
+#3976, wenshao, imporved date timezone support. bug fixed for issue #1482, https://github.com/alibaba/fastjson/commit/ffa02d528d1bb83476cba8d591d8ed1306775b75,fastjson
+#3976, wenshao, full support ISO8601 dateformat, https://github.com/alibaba/fastjson/commit/ce3c5465bdbb55bce36f9acd02704fb9c04207c8,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, bug fixed for bool parse. for issue #1422, https://github.com/alibaba/fastjson/commit/1f98b0ea33fa9e060f80be84371002caf47e859d,fastjson
+#3976, wenshao, improved basic number parse performance., https://github.com/alibaba/fastjson/commit/29b669a6704ccac7f1d7f4163005abcc3500b161,fastjson
+#3976, wenshao, bug fixed for long overflow parse. issue #1423, https://github.com/alibaba/fastjson/commit/26990ad3bfb4554e944f2d2da45fcc08b8786906,fastjson
+#3976, wenshao, improved basic number parse performance., https://github.com/alibaba/fastjson/commit/02e9deba3f6e4356a89d54d86adac379fd5de8f4,fastjson
+#3976, wenshao, improved datacodec., https://github.com/alibaba/fastjson/commit/3e890923fe6ca351f287bc4c5452907ec9e4f365,fastjson
+#3976, 高铁, bug fixed for issue 331. https://github.com/alibaba/fastjson/issues/331, https://github.com/alibaba/fastjson/commit/8d74f9e5a034888610ca3199807e2eec64178210,fastjson
+#3976, wenshao, improved basic number parse performance., https://github.com/alibaba/fastjson/commit/02e9deba3f6e4356a89d54d86adac379fd5de8f4,fastjson
+#3976, wenshao, improved basic number parse performance., https://github.com/alibaba/fastjson/commit/29b669a6704ccac7f1d7f4163005abcc3500b161,fastjson
+#3976, wenshao, improved SerializeFeature.BrowserSecure performance., https://github.com/alibaba/fastjson/commit/236a43a8776312c8e10d1937ff2bc471a9d1644e,fastjson
+#3976, wenshao, bug fixed for BrowserSecure., https://github.com/alibaba/fastjson/commit/37088117491811f060c518fcd0761cd5a195d8fa,fastjson
+#3976, 高铁, Merge pull request #1372 from neil4dong/master  For issue 1367 Spring FastJsonHttpMessageConverter Support ParamterizedType and TypeVariable, https://github.com/alibaba/fastjson/commit/57258449befabf639179a2392e01faff15b19fae,fastjson
+#3976, wenshao, Merge branch 'master' of https://github.com/alibaba/fastjson, https://github.com/alibaba/fastjson/commit/7effec024677594f33c449bd3a62b20e1a77469b,fastjson
+#3976, wenshao, bug fixed for issue #1320, https://github.com/alibaba/fastjson/commit/f6ac9160a3727b94c0926e82955480157939eba9,fastjson
+#3976, wenshao, bug fixed for multi-level inherit generic. for issue #1225, https://github.com/alibaba/fastjson/commit/771af47385330bf0505b47527698d055d883ddf5,fastjson
+#3976, 高铁, Merge pull request #1308 from kimmking/master  fixed #1306 and add 2 testcases for #1306 #1307, https://github.com/alibaba/fastjson/commit/5cadde0ea39d2d50bf46e244d15c43b0f0d336ed,fastjson
+#3976, wenshao, bug fixed for multi-level inherit generic. for issue #1225, https://github.com/alibaba/fastjson/commit/771af47385330bf0505b47527698d055d883ddf5,fastjson
+#3976, kimmking, fixed #1306 and add 2 testcases for #1306 #1307, https://github.com/alibaba/fastjson/commit/a527bc9cc72b07cefd209e4bf5e82b330dec9e16,fastjson
+#3976, wenshao, bug fixed for multi-level inherit generic. for issue #1225, https://github.com/alibaba/fastjson/commit/771af47385330bf0505b47527698d055d883ddf5,fastjson
+#3976, kimmking, Merge pull request #4 from alibaba/master  merge, https://github.com/alibaba/fastjson/commit/4fe3a168817770f7c746c871d5f48e2eded19435,fastjson
+#3976, wenshao, bug fixed for generic., https://github.com/alibaba/fastjson/commit/ce055537903a4f9e2c62116a0f76c2d93b287584,fastjson
+#3976, wenshao, bug fixed for multi-level inherit generic. for issue #1225, https://github.com/alibaba/fastjson/commit/771af47385330bf0505b47527698d055d883ddf5,fastjson
+#3976, wenshao, bug fixed for generic., https://github.com/alibaba/fastjson/commit/ce055537903a4f9e2c62116a0f76c2d93b287584,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, date parse support '0000-00-00'., https://github.com/alibaba/fastjson/commit/807f81c84647f6a13078cb6830c472dc6c34bc5c,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, bug fixed for TypeUtils. for issue #1178, https://github.com/alibaba/fastjson/commit/ce11a7b93725d2bfa8b492beff8a29fe853e0d5f,fastjson
+#3976, 高铁, bug fixed for issue 489. https://github.com/alibaba/fastjson/issues/489, https://github.com/alibaba/fastjson/commit/56272ce478a1542972598a0d6ad699436139dfbb,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, bug fixed for List/Array parse support empty string. for issue #1150, https://github.com/alibaba/fastjson/commit/66978ef79aeea3e0b9b701324156245455286dc3,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, refactor, remove reset, use parseRest, https://github.com/alibaba/fastjson/commit/b15b193dada750a818a34211ee3990d6ac7b56c7,fastjson
+#3976, wenshao, bug fixed for ZonedDateTime decode. issue #980, https://github.com/alibaba/fastjson/commit/6a787a70ca58be7ac59193ba8ea76c4bb5508374,fastjson
+#3976, 高铁, improved JSONField(format=xxxx) support, https://github.com/alibaba/fastjson/commit/2541a486971999d80270e5cd4c336f3feb57a187,fastjson
+#3976, 高铁, Merge pull request #941 from wuwen5/fixed#849#937  Fixed#849#937, https://github.com/alibaba/fastjson/commit/3e2e08d691e2d96beef2770ee543ac241960addc,fastjson
+#3976, wenshao, bug fixed for issue #849 . improved TypeRerence Performance., https://github.com/alibaba/fastjson/commit/e4562183cf45c0c5f77c446350da6b89ccf49687,fastjson
+#3976, wuwen, fixed for issue #849(improved TypeRerence Performance) and #937, https://github.com/alibaba/fastjson/commit/0ffcd17389e26eba0873fcb34e5ae03c8bf3e230,fastjson
+#3976, wenshao, bug fixed for issue #849 . improved TypeRerence Performance., https://github.com/alibaba/fastjson/commit/e4562183cf45c0c5f77c446350da6b89ccf49687,fastjson
+#3976, wenshao, bug fixed for AwtCodec reference handle. issue #869, https://github.com/alibaba/fastjson/commit/0b13393c98b98956dd01f06963c06edba3f21594,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, bug fixed for private constructor parser., https://github.com/alibaba/fastjson/commit/5040b39b53b5b007622d8e503e0f619704413a9d,fastjson
+#3976, 高铁, removed ASMJavaBeanDeserializer, direct extends JavaBeanDeserializer, https://github.com/alibaba/fastjson/commit/f9138d227ab4538bcf7df6f74a2fcb81fe504733,fastjson
+#3976, wenshao, bug fixed for references. for jsonarray ref compute error., https://github.com/alibaba/fastjson/commit/2a5e510ac9ba25883cb395565ecb3b74511e2b65,fastjson
+#3976, 高铁, bug fixed for reference, https://github.com/alibaba/fastjson/issues/522, https://github.com/alibaba/fastjson/commit/dba0e92448284de00159f8933842d2f10bc13259,fastjson
+#3976, wenshao, support emptyArray as null, https://github.com/alibaba/fastjson/commit/a5ff008817e78f6ed0fea6bafb6cc113f38f3638,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, yakolee, bug fixed for special char, https://github.com/alibaba/fastjson/commit/30e081e7402024c5b113e8523521784a1841c920,fastjson
+#3976, wenshao, chinese space '\u00A0' is not used as escape character. #690, https://github.com/alibaba/fastjson/commit/2f0ca7901c4ba279de364ebc0ef357bed60c179b,fastjson
+#3976, yakolee, bug fixed for special char, https://github.com/alibaba/fastjson/commit/30e081e7402024c5b113e8523521784a1841c920,fastjson
+#3976, wenshao, bug fixed for jsoncreator primive type default values. issue #802, https://github.com/alibaba/fastjson/commit/a3583311b4719119484adea4931bf02c1a3d69a6,fastjson
+#3976, wenshao, refactor, remove reset, use parseRest, https://github.com/alibaba/fastjson/commit/b15b193dada750a818a34211ee3990d6ac7b56c7,fastjson
+#3976, wenshao, improved date parse. issue #801, https://github.com/alibaba/fastjson/commit/e819dfb875ffc256c77cb213486cd8e07eea7ec8,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, bug fixed for issue #771, https://github.com/alibaba/fastjson/commit/733314a465af6850e65feee1060802e683a8b6eb,fastjson
+#3976, 高铁, bug fixed for List<String> write error, https://github.com/alibaba/fastjson/commit/01d010d303aa0d0173662d47261ce10ce14fd872,fastjson
+#3976, wenshao, CLOSED - issue FASTJSON-109: 添加WriteTabAsSpecial选项  http://code.alibabatech.com/jira/browse/FASTJSON-109  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1466 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/be167060cba49aa15fd600b0f878eda2048a4eaa,fastjson
+#3976, 高铁, enum parse support empty string. bug fixed for issue #676., https://github.com/alibaba/fastjson/commit/c0b2b4d1812e56db4a1489ebd22b8bbea5751225,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, 高铁, improved jdk8 LocalDateTime parse autodetect, https://github.com/alibaba/fastjson/commit/c1d93b79ae3cd864b761e246be298625b011f261,fastjson
+#3976, 高铁, jdk8 datetime codec use default date format, https://github.com/alibaba/fastjson/commit/3b752614d466c5ecab0890788d9e6e7f13da2943,fastjson
+#3976, 高铁, support JSONField dateFormat parser config. for issue 627. https://github.com/alibaba/fastjson/issues/627, https://github.com/alibaba/fastjson/commit/f1fe465bcddfb2b6f193b5951c374ff5bb4a5fe7,fastjson
+#3976, wenshao, 序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1424 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/922838f16df3954e9eedffda7536d420e54472b6,fastjson
+#3976, 高铁, bug fixed gereric base class, for issue 604. https://github.com/alibaba/fastjson/issues/604, https://github.com/alibaba/fastjson/commit/2b90431db08051bff54cb4bf51117ecde6bd49f1,fastjson
+#3976, 高铁, bug fixed for generic, https://github.com/alibaba/fastjson/commit/3bd528016c73f57af8d78646efe224b14aa56fe5,fastjson
+#3976, 高铁, bug fixed, https://github.com/alibaba/fastjson/commit/1fd037b4c9390adf25fdd7f9f7f648c7d68b6ab1,fastjson
+#3976, 高铁, refactor for serialize performance, https://github.com/alibaba/fastjson/commit/495824fc55d76329216e49df99093d61791ab05a,fastjson
+#3976, 高铁, bug fixed for class_level_filter, https://github.com/alibaba/fastjson/commit/413786cf8982399fc3ec0e481a9165c69efd63fa,fastjson
+#3976, 高铁, bug fixed for class_level_filter, https://github.com/alibaba/fastjson/commit/739adc51e6b9134a69fe2bb39ccb26f981be41f9,fastjson
+#3976, 高铁, bug fixed for scanFieldListArray, https://github.com/alibaba/fastjson/commit/aaea86e32526ece560a2403ed0d9c2cbc82a9393,fastjson
+#3976, 高铁, bug fixed for BeanToArray enum null value parse, https://github.com/alibaba/fastjson/commit/84e4d52fb941a60317e257e60a23de31cde360ca,fastjson
+#3976, 高铁, improved scanFieldStringArray, https://github.com/alibaba/fastjson/commit/b5629a05819a5e09560da170e23e446a96e3b810,fastjson
+#3976, 高铁, improved deserialzeArrayMapping, https://github.com/alibaba/fastjson/commit/c71dd0b58d8db5bae835c84b1d80e8823908b17b,fastjson
+#3976, VictorZeng, Merge pull request #9 from alibaba/master  merge, https://github.com/alibaba/fastjson/commit/c1779fc2eb69bbef2e2387d7d2318b4cda981a4d,fastjson
+#3976, 高铁, add testcase, https://github.com/alibaba/fastjson/commit/2a746a5f60c5d270f3963205b6f92444285d6b30,fastjson
+#3976, 高铁, improved performance, https://github.com/alibaba/fastjson/commit/29f6dd1121f59e29150b349e701b18794a554405,fastjson
+#3976, Victor Zeng, Merge remote-tracking branch 'alibaba/master', https://github.com/alibaba/fastjson/commit/01e2f4528144ccf4a7c776388ae890461b6de3d0,fastjson
+#3976, 高铁, improved performance, https://github.com/alibaba/fastjson/commit/29f6dd1121f59e29150b349e701b18794a554405,fastjson
+#3976, 高铁, refactor, https://github.com/alibaba/fastjson/commit/b58c45bbc64b4c55268717bba2051f9a5be98358,fastjson
+#3976, 高铁, bug fixed for List<String> write error, https://github.com/alibaba/fastjson/commit/01d010d303aa0d0173662d47261ce10ce14fd872,fastjson
+#3976, VictorZeng, Merge pull request #5 from alibaba/master  merge, https://github.com/alibaba/fastjson/commit/0919985a53735120e1fbd8daa31cf482a77923b5,fastjson
+#3976, 高铁, refactor, https://github.com/alibaba/fastjson/commit/b58c45bbc64b4c55268717bba2051f9a5be98358,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, 高铁, support final Map/Collection field deserialize, https://github.com/alibaba/fastjson/commit/eab37eb7ebd093cc66c6cc1b8d2ce6632d6c674c,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, 高铁, bug fixed for ValueFilter, https://github.com/alibaba/fastjson/commit/204a2e4d80fa34017e5a3858f9305a25d1337a88,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, 高铁, bug fixed for ValueFilter, https://github.com/alibaba/fastjson/commit/ec7b6c3d7fe1b5d3c9ae23b5f41241c0b423c0fe,fastjson
+#3976, 高铁, improved performance, https://github.com/alibaba/fastjson/commit/0c88e4961730aa81bffcaf8f480193095a114937,fastjson
+#3976, 高铁, improved performance, https://github.com/alibaba/fastjson/commit/0c88e4961730aa81bffcaf8f480193095a114937,fastjson
+#3976, 高铁, bug fixed for reference, https://github.com/alibaba/fastjson/commit/46f6125c56148344a127ffa5c7e683b09e969f4e,fastjson
+#3976, wenshao, add testcase & refactor, https://github.com/alibaba/fastjson/commit/62803c6b94b5e7b767288c3424e7749ffb49eb20,fastjson
+#3976, 高铁, bug fixed for issue 280. https://github.com/alibaba/fastjson/issues/280, https://github.com/alibaba/fastjson/commit/2eeb98970ed4edd4495b71b67412211e5d46666b,fastjson
+#3976, wenshao, fixed version number, https://github.com/alibaba/fastjson/commit/8149502733e4904f215218b94c74be51c61c1123,fastjson
+#3976, 高铁, bug fixed for issue 283. https://github.com/alibaba/fastjson/issues/283, https://github.com/alibaba/fastjson/commit/c06bab584fdb57cf0daae811ad2ccba64e467580,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, 修正ASM模式关闭时，Properties字段反序列化出错  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1386 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/37fa9d8987c7c1142e65babc3bd7d55de674472c,fastjson
+#3976, 高铁, improved performance, https://github.com/alibaba/fastjson/commit/29f6dd1121f59e29150b349e701b18794a554405,fastjson
+#3976, wenshao, full support ISO8601 dateformat, https://github.com/alibaba/fastjson/commit/ce3c5465bdbb55bce36f9acd02704fb9c04207c8,fastjson
+#3976, 高铁, bug fixed for reference, https://github.com/alibaba/fastjson/issues/522, https://github.com/alibaba/fastjson/commit/dba0e92448284de00159f8933842d2f10bc13259,fastjson
+#3976, 高铁, bug fixed for issue 504, https://github.com/alibaba/fastjson/commit/994ef3c54ab84a9cba8849de36b36affac5db790,fastjson
+#3976, wenshao, refactor, remove reset, use parseRest, https://github.com/alibaba/fastjson/commit/b15b193dada750a818a34211ee3990d6ac7b56c7,fastjson
+#3976, wenshao, 1.1.8  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1460 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/76da49cce6107ff399427ee12cbb7379744a70f2,fastjson
+#3976, wenshao, improve performance, https://github.com/alibaba/fastjson/commit/44b945b2ba2a72dc36ecae3ad68c01f0bd353b5f,fastjson
+#3976, wenshao, bugfixed for issue 109, support BAE, https://github.com/alibaba/fastjson/commit/d693fc8b114ac30315bfe764d4c1d020f77ed4ab,fastjson
+#3976, wenshao, bug fixed for issue124, concurrent error, https://github.com/alibaba/fastjson/commit/1d56e29f7ae0a1f104befa4352d6965962b02607,fastjson
+#3976, ptma, Merge branch 'master' of https://github.com/alibaba/fastjson, https://github.com/alibaba/fastjson/commit/49cc9abaf76d648653301d05e255720e4d804cc8,fastjson
+#3976, wenshao, support interface Annotation, https://github.com/alibaba/fastjson/commit/b1632dc171b80d3146bb27ae8a4eb79a50b0b77a,fastjson
+#3976, axmanwang, Merge branch 'master' of https://github.com/AlibabaTech/fastjson, https://github.com/alibaba/fastjson/commit/3d09404541279798a14a090ec4d24ba596b33b1f,fastjson
+#3976, wenshao, for device compatible, for ios, web browser, https://github.com/alibaba/fastjson/commit/105ff2098182ab62a31ae001549f767f9a15634c,fastjson
+#3976, yakolee, improve json parser, https://github.com/alibaba/fastjson/commit/1e6aa71dcc05ea59e427f8f399c2f7cde370a544,fastjson
+#3976, wenshao, fastjson-1.1.40, https://github.com/alibaba/fastjson/commit/4da1cd0231519a74cee0a04a061c89efc1176df0,fastjson
+#3976, wenshao, for device compatible, for ios, web browser, https://github.com/alibaba/fastjson/commit/105ff2098182ab62a31ae001549f767f9a15634c,fastjson
+#3976, wenshao, bug fixed for special char, https://github.com/alibaba/fastjson/commit/0d796ea63264a74c751718e5e806e9268f030a18,fastjson
+#3976, wenshao, add testcase & remove unused code, https://github.com/alibaba/fastjson/commit/74141bd7edd0da0956ef1efd9702e76e2a36a6fd,fastjson
+#3976, wenshao, improve support invisible chars, https://github.com/alibaba/fastjson/commit/f56369e3bb39c501e9ef969a93c253f6701c8648,fastjson
+#3976, wenshao, bug for long type builder setter, https://github.com/alibaba/fastjson/commit/cd21cc48c5b8564bab62d1bd262fe89290d64d45,fastjson
+#3976, 温少, support builder's set, https://github.com/alibaba/fastjson/commit/63e685d4df52a0b8e0242d19f7bfbe40dce98711,fastjson
+#3976, wenshao, improve getter/setter support, https://github.com/alibaba/fastjson/commit/e9c05c373af0da203a61a2b886104d9e64a51f18,fastjson
+#3976, wenshao, fixed compatible problem, https://github.com/alibaba/fastjson/commit/c89809ff4fad848a15b2e4b44913665d939b0f3d,fastjson
+#3976, wenshao, add testcase & remove unused code, https://github.com/alibaba/fastjson/commit/6f5dfc75fd67925f6d96f75c6f014f4b081e7300,fastjson
+#3976, wenshao, improve getter/setter support, https://github.com/alibaba/fastjson/commit/e9c05c373af0da203a61a2b886104d9e64a51f18,fastjson
+#3976, wenshao, add testcase & remove unused code, https://github.com/alibaba/fastjson/commit/618c5deda4be5679ec640539d81d2c3fe50b88ca,fastjson
+#3976, wenshao, refactor, remove reset, use parseRest, https://github.com/alibaba/fastjson/commit/b15b193dada750a818a34211ee3990d6ac7b56c7,fastjson
+#3976, 高铁, fix #3631, https://github.com/alibaba/fastjson/commit/ba07c7fbda7ffb4f5fad24f5d02c03794db8c7c9,fastjson
+#3976, 高铁, bug fixed, https://github.com/alibaba/fastjson/commit/a9117d9436c8f23e0928798b7ae72b69d5282155,fastjson
+#3976, 温绍锦, Merge pull request #3474 from fanzhongwei/master  fix issue https://github.com/alibaba/fastjson/issues/3473, https://github.com/alibaba/fastjson/commit/1ccd0f19e72487545ba01078928b99aebc92505d,fastjson
+#3976, shaojin.wensj, java.sql.Date use 'yyy-MM-dd' format, for issue #2156, https://github.com/alibaba/fastjson/commit/52652252e7095ecb11bfe8baddd2a087c04fa14e,fastjson
+#3976, 温绍锦, Merge pull request #3475 from akiyamaneko/AfterFilter-NullPointerException  fix AfterFilter NullPointer exception in #3443, https://github.com/alibaba/fastjson/commit/4a9ca8518545eaf6d2f3d3e437b2d2af0af57bff,fastjson
+#3976, 高铁, bug fixed for writeAfter, fix #3150 #3342, https://github.com/alibaba/fastjson/commit/010691b365090a312d096dde96059d4fd2cb90ea,fastjson
+#3976, fanzhongwei, fix issue https://github.com/alibaba/fastjson/issues/3473, https://github.com/alibaba/fastjson/commit/5ca2b3bd42add17fe2c4ff56d88ea5cfd457ae30,fastjson
+#3976, shaojin.wensj, java.sql.Date use 'yyy-MM-dd' format, for issue #2156, https://github.com/alibaba/fastjson/commit/52652252e7095ecb11bfe8baddd2a087c04fa14e,fastjson
+#3976, blindarcheology, Merge pull request #1 from alibaba/master  update form fork, https://github.com/alibaba/fastjson/commit/7a63aa6ff33e0ad34023d70a56c621cd8886394e,fastjson
+#3976, wenshao, bug fixed for issue #849 . improved TypeRerence Performance., https://github.com/alibaba/fastjson/commit/e4562183cf45c0c5f77c446350da6b89ccf49687,fastjson
+#3976, 温绍锦, Merge pull request #3304 from ZivYan/Issue#3227  Fix Issues 3277：Method Overriding generics #3277, https://github.com/alibaba/fastjson/commit/97b01a76efa7940c28f2f182c51e4b856fa36d75,fastjson
+#3976, Mingjun Liu, fix misspell instance word, https://github.com/alibaba/fastjson/commit/8bdcdab078afe5edc116eea70ec4a8219bc450e6,fastjson
+#3976, 温绍锦, Merge pull request #3316 from ZivYan/Issue#3312  bug fixed for smartMatchField, #3312, https://github.com/alibaba/fastjson/commit/e4c86bb66a3a2b521178848adf0c50a5d842f777,fastjson
+#3976, 高铁, bug fixed for smartMatchField, #3246, https://github.com/alibaba/fastjson/commit/18a99f2d449321393f57d50e2fbf35ca5748fae5,fastjson
+#3976, nanqi, bug fixed for smartMatchField, #3312, https://github.com/alibaba/fastjson/commit/341fc39f1b341ff1574e83c6cf51536cce758fcf,fastjson
+#3976, 高铁, improved jsonpath support, https://github.com/alibaba/fastjson/commit/d0ddf9cbbe6837ad27c289a6bad243c36b7f145e,fastjson
+#3976, 高铁, support empty immutable collection & map deserialize., https://github.com/alibaba/fastjson/commit/c758b1f79bf2078f50e0c922058a2ba92cd14314,fastjson
+#3976, wenshao, support getOnly Collection Property, https://github.com/alibaba/fastjson/commit/1d4d2472ba350aa5bc6107d6650cb42897f258b1,fastjson
+#3976, 高铁, bug fixed for ref, https://github.com/alibaba/fastjson/commit/d672cc22ae2857406da3f2acf2fe6a0d2346224f,fastjson
+#3976, wenshao, bug fixed for jsonpath., https://github.com/alibaba/fastjson/commit/d77d469a821373f6b4ac8bc52306e35fd41b0a34,fastjson
+#3976, 高铁, bug fixed for toJavaObject, https://github.com/alibaba/fastjson/commit/c8c0005a1c00a3ac7622c87f9733147611494361,fastjson
+#3976, shaojin.wensj, improved JSONObject.toJavaObject performance, https://github.com/alibaba/fastjson/commit/7b416faa1015ce04505e88d1f9b0575bcf13657f,fastjson
+#3976, 高铁, bug fixed for scanFieldString & scanFieldSymbol, https://github.com/alibaba/fastjson/commit/70eaae0eb5307be0d9701037c1d2e8067cc5aeba,fastjson
+#3976, 高铁, improved json scanner, https://github.com/alibaba/fastjson/commit/67d54ae4f14418e3f9b7df7339b62e093bb0fdfa,fastjson
+#3976, chenjiechuan 00492660, Merge branch 'master' of https://github.com/alibaba/fastjson into fix-issue3061, https://github.com/alibaba/fastjson/commit/0e257a3f8c96588d04e128668a61bf9ff6d0f720,fastjson
+#3976, chenjiechuan 00492660, fixes #3061, https://github.com/alibaba/fastjson/commit/2f1127017be74efe89a16eb08d83dd629728faa2,fastjson
+#3976, chenjiechuan 00492660, Merge branch 'master' of https://github.com/alibaba/fastjson into fix-issue3079, https://github.com/alibaba/fastjson/commit/485bf7d5119dc8b9599f1adcc542aa84d98c54c7,fastjson
+#3976, 高铁, improved timestamp support, https://github.com/alibaba/fastjson/commit/6e53cca3c60182d91db31c1a8a89e58c3fc4195d,fastjson
+#3976, 高铁, bug fixed for Timestamp serialize, https://github.com/alibaba/fastjson/commit/4f02ba33c30d9fa3c1d2b5623afa891f5bd2493f,fastjson
+#3976, 高铁, improved timestamp support, https://github.com/alibaba/fastjson/commit/6e53cca3c60182d91db31c1a8a89e58c3fc4195d,fastjson
+#3976, 高铁, improved jsonpath support, https://github.com/alibaba/fastjson/commit/7154e20e0fa11675b700d9812d3f4da1b599325f,fastjson
+#3976, wenshao, improved reference support. for issue #1363, https://github.com/alibaba/fastjson/commit/21c2f4b2f963c044e4adafef4ddd966661526af9,fastjson
+#3976, 高铁, parser auto dateFormat support 'yyyy-MM-d HH:mm:ss', #3049, https://github.com/alibaba/fastjson/commit/97d0eb057803450f7cf5f6a5b67a09427880d919,fastjson
+#3976, 高铁, bug fixed for issue 331. https://github.com/alibaba/fastjson/issues/331, https://github.com/alibaba/fastjson/commit/8d74f9e5a034888610ca3199807e2eec64178210,fastjson
+#3976, 高铁, bug fixed for handle '$ref' key, https://github.com/alibaba/fastjson/commit/89f0721acd6d121ea4dddbd3974537b2bb3ddd58,fastjson
+#3976, wenshao, improved reference support. for issue #1363, https://github.com/alibaba/fastjson/commit/21c2f4b2f963c044e4adafef4ddd966661526af9,fastjson
+#3976, 高铁, improved beanToArray support, https://github.com/alibaba/fastjson/commit/7f41acca74fa517748b13667cc8da5d4b7b6e7b3,fastjson
+#3976, wenshao, bug fixed for JSONType.orders config deserializer., https://github.com/alibaba/fastjson/commit/7ba142b66750a998694ea9a40a24daa8de7fccfa,fastjson
+#3976, 高铁, object key & array maximum level limitation, https://github.com/alibaba/fastjson/commit/fbac83f3ec563d80aeb6929c1e4bdffbd98c5117,fastjson
+#3976, wenshao, bug fixed for multi-level-TypeReference parse, https://github.com/alibaba/fastjson/commit/dc06b690e00cf5a984711e254149c3037b413a99,fastjson
+#3976, 温绍锦, Merge pull request #2748 from Omega-Ariston/fix-issue2736  Fix issue2736(JSONObject.keySet()中可能包含非String键), https://github.com/alibaba/fastjson/commit/30824c9fc7cffe0e564952160e381fbd494ee161,fastjson
+#3976, wenshao, bug fixed JSONField.serializeFeature.WriteClassName, https://github.com/alibaba/fastjson/commit/33eaec097f6cf7c23c7cf8dc08f9ca7b21f9f54c,fastjson
+#3976, 温绍锦, Merge pull request #2725 from Omega-Ariston/fix-issue2628  修复反序列化BigInteger类属性值不一致的问题, https://github.com/alibaba/fastjson/commit/bb937b92d6ca9d2bf6b532727f2e314219e4805c,fastjson
+#3976, wenshao, improved BigDecimal/BigInteger property performance., https://github.com/alibaba/fastjson/commit/1d860af51a28a4b1f5fb2d9aefaf03f4422b5141,fastjson
+#3976, Omega-Ariston, fix issue #2628, https://github.com/alibaba/fastjson/commit/78ef9d8669aebdf3dfa31cedb592cd8c099fe2d2,fastjson
+#3976, wenshao, improved BigDecimal/BigInteger property performance., https://github.com/alibaba/fastjson/commit/1d860af51a28a4b1f5fb2d9aefaf03f4422b5141,fastjson
+#3976, 高铁, bug fixed for cast to JSONObject & List<JSONObject>, https://github.com/alibaba/fastjson/commit/1cd7ae743ad5f4da9224617546df27d456eae2d8,fastjson
+#3976, shaojin.wensj, improved JSONObject.toJavaObject performance, https://github.com/alibaba/fastjson/commit/7b416faa1015ce04505e88d1f9b0575bcf13657f,fastjson
+#3976, chenjiechuan 00492660, Merge branch 'master' of https://github.com/alibaba/fastjson into fix-deserializer-typo, https://github.com/alibaba/fastjson/commit/966ff88dc9a6d7b51df39e2bf726061ba25e6485,fastjson
+#3976, shaojin.wensj, improved JSONObject.toJavaObject performance, https://github.com/alibaba/fastjson/commit/7b416faa1015ce04505e88d1f9b0575bcf13657f,fastjson
+#3976, 高铁, bug fix toJavaObject, for issue #2516, https://github.com/alibaba/fastjson/commit/77315628fbe635ec417bc45c237527577092e742,fastjson
+#3976, shaojin.wensj, improved JSONObject.toJavaObject performance, https://github.com/alibaba/fastjson/commit/7b416faa1015ce04505e88d1f9b0575bcf13657f,fastjson
+#3976, 高铁, bug fix for Field & Getter Type Not Match, https://github.com/alibaba/fastjson/commit/fab95ad30d827fd66a5714f67c2ba29c73cbe8f2,fastjson
+#3976, shaojin.wensj, improved JSONObject.toJavaObject performance, https://github.com/alibaba/fastjson/commit/7b416faa1015ce04505e88d1f9b0575bcf13657f,fastjson
+#3976, 高铁, bug fixed for json path, https://github.com/alibaba/fastjson/commit/e47675f6cd81745cb608d209420845746c162880,fastjson
+#3976, wenshao, bug fixed for jsonpath. issue #735, https://github.com/alibaba/fastjson/commit/178fc2df6677c70cd1bd390ed59cf846260fa40a,fastjson
+#3976, shaojin.wensj, bug fixed for smark field match, for issue #2348, https://github.com/alibaba/fastjson/commit/f5e9d59a441601f517a1cc9efe10d5ee72864ca8,fastjson
+#3976, 高铁, parser support filedName like 'message_id', https://github.com/alibaba/fastjson/commit/12fd92fb1c41e5b9aa6ec4455d8802911e179052,fastjson
+#3976, shaojin.wensj, write reference except Collections.emptyMap(), for issue #2240, https://github.com/alibaba/fastjson/commit/a117a37cdf8172748dde4c00d06fca06a0ef29c4,fastjson
+#3976, wenshao, 1.1.8  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1460 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/76da49cce6107ff399427ee12cbb7379744a70f2,fastjson
+#3976, 业余布道师, Optimize FastJsonRedisSerializer., https://github.com/alibaba/fastjson/commit/dec2613040360d2f712ec6b8b2e7f67dabc9f180,fastjson
+#3976, 业余布道师, Merge branch 'master' of https://github.com/alibaba/fastjson, https://github.com/alibaba/fastjson/commit/50b3af50de60e8251e6065e3e226007b5bb41f74,fastjson
+#3976, 业余布道师, Merge branch 'master' of https://github.com/alibaba/fastjson, https://github.com/alibaba/fastjson/commit/0d272644b4ff43684260486629adc3e99cd45b66,fastjson
+#3976, wenshao, improved float/double parse performance., https://github.com/alibaba/fastjson/commit/ef6c08a304ba53d376d8dcde9c4eff2476e27b40,fastjson
+#3976, shaojin.wensj, bug fixed for parseFloat, https://github.com/alibaba/fastjson/commit/17e56f9c6b1e650c1ea9190d479ad390111234f1,fastjson
+#3976, wenshao, improved float/double parse performance., https://github.com/alibaba/fastjson/commit/ef6c08a304ba53d376d8dcde9c4eff2476e27b40,fastjson
+#3976, wenshao, improved castToInt, https://github.com/alibaba/fastjson/commit/93790a2257e8b7776f8e87fee2d5072618ad0b66,fastjson
+#3976, wenshao, refactor cast to byte/short/int/long, https://github.com/alibaba/fastjson/commit/37bd050e90535b0d58940eb2c406de4faee159f7,fastjson
+#3976, wenshao, bug fixed for encodeUTF8, https://github.com/alibaba/fastjson/commit/bc66781b54314972cf07d0ca4a4a68a6d2bc169a,fastjson
+#3976, 高铁, improved toBytes & writeJSONString performance, https://github.com/alibaba/fastjson/commit/6594789438cea10cecb9799a32138d2eddb4cba4,fastjson
+#3976, wenshao, bug fixed for LabelFilter, for issue #1856, https://github.com/alibaba/fastjson/commit/15dead6fcbb32402b9a3a4802c24f1780d6e1901,fastjson
+#3976, 高铁, refactor, https://github.com/alibaba/fastjson/commit/34342bec4f11298c9a52997ad066c19e47726e1e,fastjson
+#3976, zgray, bug fixed for issue #1884, https://github.com/alibaba/fastjson/commit/57aff945aae44d0adb86467133b3e3dc19044d5e,fastjson
+#3976, zgray, fix: 解决在解析ISO8601不带毫秒的数值时，毫秒依然有值的问题。  fixed #1884, https://github.com/alibaba/fastjson/commit/ba07795057a92f6af12191d5c74fff1649725565,fastjson
+#3976, wenshao, bug fixed for float parse. for issue #1723, https://github.com/alibaba/fastjson/commit/07e7ba5982fe0ba3e8a75ba034102d8d71c1f1d0,fastjson
+#3976, wenshao, improved float/double parse performance., https://github.com/alibaba/fastjson/commit/ef6c08a304ba53d376d8dcde9c4eff2476e27b40,fastjson
+#3976, wenshao, bug fixed for scanFloat. for issue #1723, https://github.com/alibaba/fastjson/commit/f5b7a5fce0b61e7150bb27813135e1b1efb97b46,fastjson
+#3976, wenshao, improved float/double parse performance., https://github.com/alibaba/fastjson/commit/ef6c08a304ba53d376d8dcde9c4eff2476e27b40,fastjson
+#3976, wenshao, bug fixed for toJavaObject. for issue #1727, https://github.com/alibaba/fastjson/commit/57f99a33a0e2870c47bc3e43a4db06dd573b3503,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, bug fixed for issue #1603, https://github.com/alibaba/fastjson/commit/362eb79838854c1b18ea8bbd456b296dde402b30,fastjson
+#3976, wenshao, improve support readonly type, such as AtomicInteger, AtomicLong, AtomicBoolean, Map, https://github.com/alibaba/fastjson/commit/0c4f90d55d1aff4d011accd1cfefb59033551100,fastjson
+#3976, wenshao, bug fixed for WriteNullBooleanAsFalse. for issue #1570, https://github.com/alibaba/fastjson/commit/1804c85adea41809d9d171fbc271c2f53af93edf,fastjson
+#3976, wenshao, improved SerializeFeature user experience. issue #867, https://github.com/alibaba/fastjson/commit/91e9164ce5217f3f1710882898cac511e1aae458,fastjson
+#3976, wenshao, improved deserialize for Map.Entry. bug fixed for issue #1583, https://github.com/alibaba/fastjson/commit/c4343c398b1ab609251bad4c13112a428aaa62ec,fastjson
+#3976, 高铁, Merge pull request #1501 from neil4dong/master  修复在FastJsonHttpMessageConverter 中使用了spring4.x版本新增的TypeResolvable 导致sp…, https://github.com/alibaba/fastjson/commit/020aefbaadf8cee2916bcfd552bdf66ec6b6e830,fastjson
+#3976, Neil Dong, Merge pull request #5 from alibaba/master  pull upstream, https://github.com/alibaba/fastjson/commit/a97885cf1239701c7446a5bfe548f7dd3c00a5e2,fastjson
+#3976, wenshao, improved smart match performance., https://github.com/alibaba/fastjson/commit/b1222868654e6d508374110ae35e48613acc45ea,fastjson
+#3976, wenshao, bug fixed for 'is' prefix fieldName smartMatch. for issue #1529, https://github.com/alibaba/fastjson/commit/654ea41bb0187863eb2db7ab6528c081850183b8,fastjson
+#3976, wenshao, update to 1.1.60.android, https://github.com/alibaba/fastjson/commit/246767658d5b3832e479394aa4ea5310023f6144,fastjson
+#3976, 高铁, Merge pull request #1514 from kimmking/master   remove DEFFAULT_LOCAL_DATE_TIME_FORMAT and modify testcase, https://github.com/alibaba/fastjson/commit/dd30ab7f04a740de94a224f5fa0d4ac65f5ddb13,fastjson
+#3976, kimmking, fix #1493, https://github.com/alibaba/fastjson/commit/181d423fbb50dd157209d11ac872c73d0e224bd8,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, improved date parse support., https://github.com/alibaba/fastjson/commit/2b9a6afb5386ddaa2c308dc75efe9747cfc00340,fastjson
+#3976, 高铁, bug fixed for issue 331. https://github.com/alibaba/fastjson/issues/331, https://github.com/alibaba/fastjson/commit/8d74f9e5a034888610ca3199807e2eec64178210,fastjson
+#3976, wenshao, imporved date timezone support. bug fixed for issue #1482, https://github.com/alibaba/fastjson/commit/ffa02d528d1bb83476cba8d591d8ed1306775b75,fastjson
+#3976, wenshao, full support ISO8601 dateformat, https://github.com/alibaba/fastjson/commit/ce3c5465bdbb55bce36f9acd02704fb9c04207c8,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, bug fixed for bool parse. for issue #1422, https://github.com/alibaba/fastjson/commit/1f98b0ea33fa9e060f80be84371002caf47e859d,fastjson
+#3976, wenshao, improved basic number parse performance., https://github.com/alibaba/fastjson/commit/29b669a6704ccac7f1d7f4163005abcc3500b161,fastjson
+#3976, wenshao, bug fixed for long overflow parse. issue #1423, https://github.com/alibaba/fastjson/commit/26990ad3bfb4554e944f2d2da45fcc08b8786906,fastjson
+#3976, wenshao, improved basic number parse performance., https://github.com/alibaba/fastjson/commit/02e9deba3f6e4356a89d54d86adac379fd5de8f4,fastjson
+#3976, wenshao, improved datacodec., https://github.com/alibaba/fastjson/commit/3e890923fe6ca351f287bc4c5452907ec9e4f365,fastjson
+#3976, 高铁, bug fixed for issue 331. https://github.com/alibaba/fastjson/issues/331, https://github.com/alibaba/fastjson/commit/8d74f9e5a034888610ca3199807e2eec64178210,fastjson
+#3976, wenshao, improved basic number parse performance., https://github.com/alibaba/fastjson/commit/02e9deba3f6e4356a89d54d86adac379fd5de8f4,fastjson
+#3976, wenshao, improved basic number parse performance., https://github.com/alibaba/fastjson/commit/29b669a6704ccac7f1d7f4163005abcc3500b161,fastjson
+#3976, wenshao, improved SerializeFeature.BrowserSecure performance., https://github.com/alibaba/fastjson/commit/236a43a8776312c8e10d1937ff2bc471a9d1644e,fastjson
+#3976, wenshao, bug fixed for BrowserSecure., https://github.com/alibaba/fastjson/commit/37088117491811f060c518fcd0761cd5a195d8fa,fastjson
+#3976, 高铁, Merge pull request #1372 from neil4dong/master  For issue 1367 Spring FastJsonHttpMessageConverter Support ParamterizedType and TypeVariable, https://github.com/alibaba/fastjson/commit/57258449befabf639179a2392e01faff15b19fae,fastjson
+#3976, wenshao, Merge branch 'master' of https://github.com/alibaba/fastjson, https://github.com/alibaba/fastjson/commit/7effec024677594f33c449bd3a62b20e1a77469b,fastjson
+#3976, wenshao, bug fixed for issue #1320, https://github.com/alibaba/fastjson/commit/f6ac9160a3727b94c0926e82955480157939eba9,fastjson
+#3976, wenshao, bug fixed for multi-level inherit generic. for issue #1225, https://github.com/alibaba/fastjson/commit/771af47385330bf0505b47527698d055d883ddf5,fastjson
+#3976, 高铁, Merge pull request #1308 from kimmking/master  fixed #1306 and add 2 testcases for #1306 #1307, https://github.com/alibaba/fastjson/commit/5cadde0ea39d2d50bf46e244d15c43b0f0d336ed,fastjson
+#3976, wenshao, bug fixed for multi-level inherit generic. for issue #1225, https://github.com/alibaba/fastjson/commit/771af47385330bf0505b47527698d055d883ddf5,fastjson
+#3976, kimmking, fixed #1306 and add 2 testcases for #1306 #1307, https://github.com/alibaba/fastjson/commit/a527bc9cc72b07cefd209e4bf5e82b330dec9e16,fastjson
+#3976, wenshao, bug fixed for multi-level inherit generic. for issue #1225, https://github.com/alibaba/fastjson/commit/771af47385330bf0505b47527698d055d883ddf5,fastjson
+#3976, kimmking, Merge pull request #4 from alibaba/master  merge, https://github.com/alibaba/fastjson/commit/4fe3a168817770f7c746c871d5f48e2eded19435,fastjson
+#3976, wenshao, bug fixed for generic., https://github.com/alibaba/fastjson/commit/ce055537903a4f9e2c62116a0f76c2d93b287584,fastjson
+#3976, wenshao, bug fixed for multi-level inherit generic. for issue #1225, https://github.com/alibaba/fastjson/commit/771af47385330bf0505b47527698d055d883ddf5,fastjson
+#3976, wenshao, bug fixed for generic., https://github.com/alibaba/fastjson/commit/ce055537903a4f9e2c62116a0f76c2d93b287584,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, date parse support '0000-00-00'., https://github.com/alibaba/fastjson/commit/807f81c84647f6a13078cb6830c472dc6c34bc5c,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, bug fixed for TypeUtils. for issue #1178, https://github.com/alibaba/fastjson/commit/ce11a7b93725d2bfa8b492beff8a29fe853e0d5f,fastjson
+#3976, 高铁, bug fixed for issue 489. https://github.com/alibaba/fastjson/issues/489, https://github.com/alibaba/fastjson/commit/56272ce478a1542972598a0d6ad699436139dfbb,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, bug fixed for List/Array parse support empty string. for issue #1150, https://github.com/alibaba/fastjson/commit/66978ef79aeea3e0b9b701324156245455286dc3,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, refactor, remove reset, use parseRest, https://github.com/alibaba/fastjson/commit/b15b193dada750a818a34211ee3990d6ac7b56c7,fastjson
+#3976, wenshao, bug fixed for ZonedDateTime decode. issue #980, https://github.com/alibaba/fastjson/commit/6a787a70ca58be7ac59193ba8ea76c4bb5508374,fastjson
+#3976, 高铁, improved JSONField(format=xxxx) support, https://github.com/alibaba/fastjson/commit/2541a486971999d80270e5cd4c336f3feb57a187,fastjson
+#3976, 高铁, Merge pull request #941 from wuwen5/fixed#849#937  Fixed#849#937, https://github.com/alibaba/fastjson/commit/3e2e08d691e2d96beef2770ee543ac241960addc,fastjson
+#3976, wenshao, bug fixed for issue #849 . improved TypeRerence Performance., https://github.com/alibaba/fastjson/commit/e4562183cf45c0c5f77c446350da6b89ccf49687,fastjson
+#3976, wuwen, fixed for issue #849(improved TypeRerence Performance) and #937, https://github.com/alibaba/fastjson/commit/0ffcd17389e26eba0873fcb34e5ae03c8bf3e230,fastjson
+#3976, wenshao, bug fixed for issue #849 . improved TypeRerence Performance., https://github.com/alibaba/fastjson/commit/e4562183cf45c0c5f77c446350da6b89ccf49687,fastjson
+#3976, wenshao, bug fixed for AwtCodec reference handle. issue #869, https://github.com/alibaba/fastjson/commit/0b13393c98b98956dd01f06963c06edba3f21594,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, bug fixed for private constructor parser., https://github.com/alibaba/fastjson/commit/5040b39b53b5b007622d8e503e0f619704413a9d,fastjson
+#3976, 高铁, removed ASMJavaBeanDeserializer, direct extends JavaBeanDeserializer, https://github.com/alibaba/fastjson/commit/f9138d227ab4538bcf7df6f74a2fcb81fe504733,fastjson
+#3976, wenshao, bug fixed for references. for jsonarray ref compute error., https://github.com/alibaba/fastjson/commit/2a5e510ac9ba25883cb395565ecb3b74511e2b65,fastjson
+#3976, 高铁, bug fixed for reference, https://github.com/alibaba/fastjson/issues/522, https://github.com/alibaba/fastjson/commit/dba0e92448284de00159f8933842d2f10bc13259,fastjson
+#3976, wenshao, support emptyArray as null, https://github.com/alibaba/fastjson/commit/a5ff008817e78f6ed0fea6bafb6cc113f38f3638,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, yakolee, bug fixed for special char, https://github.com/alibaba/fastjson/commit/30e081e7402024c5b113e8523521784a1841c920,fastjson
+#3976, wenshao, chinese space '\u00A0' is not used as escape character. #690, https://github.com/alibaba/fastjson/commit/2f0ca7901c4ba279de364ebc0ef357bed60c179b,fastjson
+#3976, yakolee, bug fixed for special char, https://github.com/alibaba/fastjson/commit/30e081e7402024c5b113e8523521784a1841c920,fastjson
+#3976, wenshao, bug fixed for jsoncreator primive type default values. issue #802, https://github.com/alibaba/fastjson/commit/a3583311b4719119484adea4931bf02c1a3d69a6,fastjson
+#3976, wenshao, refactor, remove reset, use parseRest, https://github.com/alibaba/fastjson/commit/b15b193dada750a818a34211ee3990d6ac7b56c7,fastjson
+#3976, wenshao, improved date parse. issue #801, https://github.com/alibaba/fastjson/commit/e819dfb875ffc256c77cb213486cd8e07eea7ec8,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, bug fixed for issue #771, https://github.com/alibaba/fastjson/commit/733314a465af6850e65feee1060802e683a8b6eb,fastjson
+#3976, 高铁, bug fixed for List<String> write error, https://github.com/alibaba/fastjson/commit/01d010d303aa0d0173662d47261ce10ce14fd872,fastjson
+#3976, wenshao, CLOSED - issue FASTJSON-109: 添加WriteTabAsSpecial选项  http://code.alibabatech.com/jira/browse/FASTJSON-109  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1466 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/be167060cba49aa15fd600b0f878eda2048a4eaa,fastjson
+#3976, 高铁, enum parse support empty string. bug fixed for issue #676., https://github.com/alibaba/fastjson/commit/c0b2b4d1812e56db4a1489ebd22b8bbea5751225,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, 高铁, improved jdk8 LocalDateTime parse autodetect, https://github.com/alibaba/fastjson/commit/c1d93b79ae3cd864b761e246be298625b011f261,fastjson
+#3976, 高铁, jdk8 datetime codec use default date format, https://github.com/alibaba/fastjson/commit/3b752614d466c5ecab0890788d9e6e7f13da2943,fastjson
+#3976, 高铁, support JSONField dateFormat parser config. for issue 627. https://github.com/alibaba/fastjson/issues/627, https://github.com/alibaba/fastjson/commit/f1fe465bcddfb2b6f193b5951c374ff5bb4a5fe7,fastjson
+#3976, wenshao, 序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1424 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/922838f16df3954e9eedffda7536d420e54472b6,fastjson
+#3976, 高铁, bug fixed gereric base class, for issue 604. https://github.com/alibaba/fastjson/issues/604, https://github.com/alibaba/fastjson/commit/2b90431db08051bff54cb4bf51117ecde6bd49f1,fastjson
+#3976, 高铁, bug fixed for generic, https://github.com/alibaba/fastjson/commit/3bd528016c73f57af8d78646efe224b14aa56fe5,fastjson
+#3976, 高铁, bug fixed, https://github.com/alibaba/fastjson/commit/1fd037b4c9390adf25fdd7f9f7f648c7d68b6ab1,fastjson
+#3976, 高铁, refactor for serialize performance, https://github.com/alibaba/fastjson/commit/495824fc55d76329216e49df99093d61791ab05a,fastjson
+#3976, 高铁, bug fixed for class_level_filter, https://github.com/alibaba/fastjson/commit/413786cf8982399fc3ec0e481a9165c69efd63fa,fastjson
+#3976, 高铁, bug fixed for class_level_filter, https://github.com/alibaba/fastjson/commit/739adc51e6b9134a69fe2bb39ccb26f981be41f9,fastjson
+#3976, 高铁, bug fixed for scanFieldListArray, https://github.com/alibaba/fastjson/commit/aaea86e32526ece560a2403ed0d9c2cbc82a9393,fastjson
+#3976, 高铁, improved scanFieldStringArray, https://github.com/alibaba/fastjson/commit/b5629a05819a5e09560da170e23e446a96e3b810,fastjson
+#3976, 高铁, bug fixed for BeanToArray enum null value parse, https://github.com/alibaba/fastjson/commit/84e4d52fb941a60317e257e60a23de31cde360ca,fastjson
+#3976, 高铁, improved deserialzeArrayMapping, https://github.com/alibaba/fastjson/commit/c71dd0b58d8db5bae835c84b1d80e8823908b17b,fastjson
+#3976, VictorZeng, Merge pull request #9 from alibaba/master  merge, https://github.com/alibaba/fastjson/commit/c1779fc2eb69bbef2e2387d7d2318b4cda981a4d,fastjson
+#3976, 高铁, improved performance, https://github.com/alibaba/fastjson/commit/29f6dd1121f59e29150b349e701b18794a554405,fastjson
+#3976, 高铁, add testcase, https://github.com/alibaba/fastjson/commit/2a746a5f60c5d270f3963205b6f92444285d6b30,fastjson
+#3976, 高铁, improved performance, https://github.com/alibaba/fastjson/commit/29f6dd1121f59e29150b349e701b18794a554405,fastjson
+#3976, Victor Zeng, Merge remote-tracking branch 'alibaba/master', https://github.com/alibaba/fastjson/commit/01e2f4528144ccf4a7c776388ae890461b6de3d0,fastjson
+#3976, 高铁, refactor, https://github.com/alibaba/fastjson/commit/b58c45bbc64b4c55268717bba2051f9a5be98358,fastjson
+#3976, 高铁, bug fixed for List<String> write error, https://github.com/alibaba/fastjson/commit/01d010d303aa0d0173662d47261ce10ce14fd872,fastjson
+#3976, 高铁, refactor, https://github.com/alibaba/fastjson/commit/b58c45bbc64b4c55268717bba2051f9a5be98358,fastjson
+#3976, VictorZeng, Merge pull request #5 from alibaba/master  merge, https://github.com/alibaba/fastjson/commit/0919985a53735120e1fbd8daa31cf482a77923b5,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, 高铁, support final Map/Collection field deserialize, https://github.com/alibaba/fastjson/commit/eab37eb7ebd093cc66c6cc1b8d2ce6632d6c674c,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, 高铁, bug fixed for ValueFilter, https://github.com/alibaba/fastjson/commit/204a2e4d80fa34017e5a3858f9305a25d1337a88,fastjson
+#3976, 高铁, improved performance, https://github.com/alibaba/fastjson/commit/0c88e4961730aa81bffcaf8f480193095a114937,fastjson
+#3976, 高铁, bug fixed for ValueFilter, https://github.com/alibaba/fastjson/commit/ec7b6c3d7fe1b5d3c9ae23b5f41241c0b423c0fe,fastjson
+#3976, 高铁, improved performance, https://github.com/alibaba/fastjson/commit/0c88e4961730aa81bffcaf8f480193095a114937,fastjson
+#3976, 高铁, bug fixed for reference, https://github.com/alibaba/fastjson/commit/46f6125c56148344a127ffa5c7e683b09e969f4e,fastjson
+#3976, wenshao, add testcase & refactor, https://github.com/alibaba/fastjson/commit/62803c6b94b5e7b767288c3424e7749ffb49eb20,fastjson
+#3976, wenshao, fixed version number, https://github.com/alibaba/fastjson/commit/8149502733e4904f215218b94c74be51c61c1123,fastjson
+#3976, 高铁, bug fixed for issue 280. https://github.com/alibaba/fastjson/issues/280, https://github.com/alibaba/fastjson/commit/2eeb98970ed4edd4495b71b67412211e5d46666b,fastjson
+#3976, wenshao, 反序列化序列化支持Public Field  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1427 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/cdb820925ce2e3e1cbd9646c214d998d0b98a7fd,fastjson
+#3976, 高铁, bug fixed for issue 283. https://github.com/alibaba/fastjson/issues/283, https://github.com/alibaba/fastjson/commit/c06bab584fdb57cf0daae811ad2ccba64e467580,fastjson
+#3976, wenshao, 修正ASM模式关闭时，Properties字段反序列化出错  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1386 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/37fa9d8987c7c1142e65babc3bd7d55de674472c,fastjson
+#3976, wenshao, full support ISO8601 dateformat, https://github.com/alibaba/fastjson/commit/ce3c5465bdbb55bce36f9acd02704fb9c04207c8,fastjson
+#3976, 高铁, improved performance, https://github.com/alibaba/fastjson/commit/29f6dd1121f59e29150b349e701b18794a554405,fastjson
+#3976, wenshao, refactor, remove reset, use parseRest, https://github.com/alibaba/fastjson/commit/b15b193dada750a818a34211ee3990d6ac7b56c7,fastjson
+#3976, 高铁, bug fixed for reference, https://github.com/alibaba/fastjson/issues/522, https://github.com/alibaba/fastjson/commit/dba0e92448284de00159f8933842d2f10bc13259,fastjson
+#3976, wenshao, 1.1.8  git-svn-id: http://code.alibabatech.com/svn/fastjson/trunk/fastjson@1460 fb902949-7fc4-4485-a80f-4d6ff335c879, https://github.com/alibaba/fastjson/commit/76da49cce6107ff399427ee12cbb7379744a70f2,fastjson
+#3976, 高铁, bug fixed for issue 504, https://github.com/alibaba/fastjson/commit/994ef3c54ab84a9cba8849de36b36affac5db790,fastjson
+#3976, wenshao, improve performance, https://github.com/alibaba/fastjson/commit/44b945b2ba2a72dc36ecae3ad68c01f0bd353b5f,fastjson
+#3976, wenshao, bugfixed for issue 109, support BAE, https://github.com/alibaba/fastjson/commit/d693fc8b114ac30315bfe764d4c1d020f77ed4ab,fastjson
+#3976, wenshao, support interface Annotation, https://github.com/alibaba/fastjson/commit/b1632dc171b80d3146bb27ae8a4eb79a50b0b77a,fastjson
+#3976, wenshao, bug fixed for issue124, concurrent error, https://github.com/alibaba/fastjson/commit/1d56e29f7ae0a1f104befa4352d6965962b02607,fastjson
+#3976, axmanwang, Merge branch 'master' of https://github.com/AlibabaTech/fastjson, https://github.com/alibaba/fastjson/commit/3d09404541279798a14a090ec4d24ba596b33b1f,fastjson
+#3976, ptma, Merge branch 'master' of https://github.com/alibaba/fastjson, https://github.com/alibaba/fastjson/commit/49cc9abaf76d648653301d05e255720e4d804cc8,fastjson
+#3976, wenshao, for device compatible, for ios, web browser, https://github.com/alibaba/fastjson/commit/105ff2098182ab62a31ae001549f767f9a15634c,fastjson
+#3976, yakolee, improve json parser, https://github.com/alibaba/fastjson/commit/1e6aa71dcc05ea59e427f8f399c2f7cde370a544,fastjson
+#3976, wenshao, for device compatible, for ios, web browser, https://github.com/alibaba/fastjson/commit/105ff2098182ab62a31ae001549f767f9a15634c,fastjson
+#3976, wenshao, fastjson-1.1.40, https://github.com/alibaba/fastjson/commit/4da1cd0231519a74cee0a04a061c89efc1176df0,fastjson
+#3976, wenshao, add testcase & remove unused code, https://github.com/alibaba/fastjson/commit/74141bd7edd0da0956ef1efd9702e76e2a36a6fd,fastjson
+#3976, wenshao, bug fixed for special char, https://github.com/alibaba/fastjson/commit/0d796ea63264a74c751718e5e806e9268f030a18,fastjson
+#3976, wenshao, improve support invisible chars, https://github.com/alibaba/fastjson/commit/f56369e3bb39c501e9ef969a93c253f6701c8648,fastjson
+#3976, wenshao, bug for long type builder setter, https://github.com/alibaba/fastjson/commit/cd21cc48c5b8564bab62d1bd262fe89290d64d45,fastjson
+#3976, 温少, support builder's set, https://github.com/alibaba/fastjson/commit/63e685d4df52a0b8e0242d19f7bfbe40dce98711,fastjson
+#3976, wenshao, improve getter/setter support, https://github.com/alibaba/fastjson/commit/e9c05c373af0da203a61a2b886104d9e64a51f18,fastjson
+#3976, wenshao, fixed compatible problem, https://github.com/alibaba/fastjson/commit/c89809ff4fad848a15b2e4b44913665d939b0f3d,fastjson
+#3976, wenshao, improve getter/setter support, https://github.com/alibaba/fastjson/commit/e9c05c373af0da203a61a2b886104d9e64a51f18,fastjson
+#3976, wenshao, add testcase & remove unused code, https://github.com/alibaba/fastjson/commit/6f5dfc75fd67925f6d96f75c6f014f4b081e7300,fastjson
+#3976, wenshao, refactor, remove reset, use parseRest, https://github.com/alibaba/fastjson/commit/b15b193dada750a818a34211ee3990d6ac7b56c7,fastjson
+#3976, wenshao, add testcase & remove unused code, https://github.com/alibaba/fastjson/commit/618c5deda4be5679ec640539d81d2c3fe50b88ca,fastjson
+#3976, 温少, bugfix for empty object parse error, https://github.com/alibaba/fastjson/commit/1ac787a0a6cb8ee72bd2621121cf1af6aea3f630,fastjson
